@@ -3,10 +3,293 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <header class="page-header">
+      <img class="page-header__logo" src="https://via.placeholder.com/165x35" alt="Логотип Device">
+      <ul class="page-header__controls-list">
+        <li class="page-header__control">
+          <label for="page-header__search">
+            <input type="text" id="page-header__search" name="search" placeholder="Поиск по сайту">
+          </label>
+        </li>
+        <li class="page-header__control">
+          <a href="#">Войти</a>
+        </li>
+        <li class="page-header__control">
+          <a href="#">Сравнить</a>
+        </li>
+        <li class="page-header__control">
+          <a href="#">Корзина</a>
+        </li>
+      </ul>
+      <ul class="page-header__shop-controls-list">
+        <li class="page-header__control">
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="page-header__control">
+          <a href="#">Доставка</a>
+        </li>
+        <li class="page-header__control">
+          <a href="#">Гарантия</a>
+        </li>
+        <li class="page-header__control">
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <main class="page-main">
+      <section class="page-main__slider">
+        <article class="page-main__slide">
+          <header class="page-main__slide-header">
+            <h2>Делай селфи, как Бен Стиллер!</h2>
+          </header>
+          <img class="page-header__logo" src="https://via.placeholder.com/384x486" alt="Селфи-палка">
+          <p class="page-main__slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+          <div class="page-main__slide-more">
+            <a class="page-main__slide-more-btn" href="#">Подробнее</a>
+            <ul class="page-main__slide-features">
+              <li class="page-main__slide-feature">
+                <p>8,5 м
+                  <span>Длина палки</span>
+                </p>
+              </li>
+              <li class="page-main__slide-feature">
+                <p>5 кг<span>Вес палки</span>
+                </p>
+              </li>
+              <li class="page-main__slide-feature">
+                <p>Карбон<span>Материал</span>
+                </p>
+              </li>
+            </ul>
+            <div class="page-main__slider-toggles">
+              <p class="page-main__slider-toggle page-main__slider-toggle--active"></p>
+              <p class="page-main__slider-toggle"></p>
+              <p class="page-main__slider-toggle"></p>
+            </div>
+          </div>
+        </article>
+        <article class="page-main__slide visually-hidden">
+          <header class="page-main__slide-header">
+            <h2>Худеем правильно!</h2>
+          </header>
+          <img class="page-header__logo" src="https://via.placeholder.com/345x485" alt="Умные часы">
+          <p class="page-main__slide-description">
+            Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+          </p>
+          <div class="page-main__slide-more">
+            <a class="page-main__slide-more-btn" href="#">Подробнее</a>
+            <ul class="page-main__slide-features">
+              <li class="page-main__slide-feature">
+                <p>48 часов
+                  <span>Без подзарядки</span>
+                </p>
+              </li>
+            </ul>
+            <div class="page-main__slider-toggles">
+              <p class="page-main__slider-toggle"></p>
+              <p class="page-main__slider-toggle page-main__slider-toggle--active"></p>
+              <p class="page-main__slider-toggle"></p>
+            </div>
+          </div>
+        </article>
+        <article class="page-main__slide visually-hidden">
+          <header class="page-main__slide-header">
+            <h2>Порхает как бабочка, жалит как пчела!</h2>
+          </header>
+          <img class="page-header__logo" src="https://via.placeholder.com/526x334" alt="Квадрокоптер">
+          <p class="page-main__slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+          </p>
+          <div class="page-main__slide-more">
+            <a class="page-main__slide-more-btn" href="#">Подробнее</a>
+            <ul class="page-main__slide-features">
+              <li class="page-main__slide-feature">
+                <p>800 м
+                  <span>Длина полета</span>
+                </p>
+              </li>
+              <li class="page-main__slide-feature">
+                <p>50 м<span>Радиус поражения</span>
+                </p>
+              </li>
+            </ul>
+            <div class="page-main__slider-toggles">
+              <p class="page-main__slider-toggle"></p>
+              <p class="page-main__slider-toggle"></p>
+              <p class="page-main__slider-toggle page-main__slider-toggle--active"></p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="page-main__popular">
+        <ul class="page-main__popular-list">
+          <li class="page-main__popular-item">
+            <a href="#" class="page-main__popular-item-wrapper">
+              <div class="page-main__popular-picture">
+                <img class="page-header__logo" src="https://via.placeholder.com/97x55" alt="Логотип Device">
+              </div>
+              <h3>Виртуальная реальность</h3>
+            </a>
+          </li>
+          <li class="page-main__popular-item">
+            <a href="#" class="page-main__popular-item-wrapper">
+              <div class="page-main__popular-picture">
+                <img class="page-header__logo" src="https://via.placeholder.com/86x117" alt="Логотип Device">
+              </div>
+              <h3>Моноподы для селфи</h3>
+            </a>
+          </li>
+          <li class="page-main__popular-item">
+            <a href="#" class="page-main__popular-item-wrapper">
+              <div class="page-main__popular-picture">
+                <img class="page-header__logo" src="https://via.placeholder.com/71x87" alt="Логотип Device">
+              </div>
+              <h3>Экшн-камеры</h3>
+            </a>
+          </li>
+          <li class="page-main__popular-item">
+            <a href="#" class="page-main__popular-item-wrapper">
+              <div class="page-main__popular-picture">
+                <img class="page-header__logo" src="https://via.placeholder.com/107x65" alt="Логотип Device">
+              </div>
+              <h3>Фитнес-браслеты</h3>
+            </a>
+          </li>
+          <li class="page-main__popular-item">
+            <a href="#" class="page-main__popular-item-wrapper">
+              <div class="page-main__popular-picture">
+                <img class="page-header__logo" src="https://via.placeholder.com/56x98" alt="Логотип Device">
+              </div>
+              <h3>Умные часы</h3>
+            </a>
+          </li>
+          <li class="page-main__popular-item">
+            <a href="#" class="page-main__popular-item-wrapper">
+              <div class="page-main__popular-picture">
+                <img class="page-header__logo" src="https://via.placeholder.com/132x69" alt="Логотип Device">
+              </div>
+              <h3>Квадрокоптеры</h3>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="page-main__services">
+        <ul class="page-main__services-list">
+          <li class="page-main__services-item page-main__services-item--active">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="page-main__services-item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="page-main__services-item">
+            <a href="#">Кредит</a>
+          </li>
+        </ul>
+        <div class="page-main__services-body page-main__services-body--active">
+          <h2>Доставка</h2>
+          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </div>
+        <div class="page-main__services-body visually-hidden">
+          <h2>Гарантия</h2>
+          <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+        </div>
+        <div class="page-main__services-body visually-hidden">
+          <h2>Кредит</h2>
+          <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+        </div>
+      </section>
+      <section class="page-main__logotypes">
+        <ul class="page-main__logotypes-list">
+          <li class="page-main__logotypes-item">
+            <img class="page-header__logo" src="https://via.placeholder.com/260x100" alt="Логотип Device">
+          </li>
+          <li class="page-main__logotypes-item">
+            <img class="page-header__logo" src="https://via.placeholder.com/260x100" alt="Логотип Device">
+          </li>
+          <li class="page-main__logotypes-item">
+            <img class="page-header__logo" src="https://via.placeholder.com/260x100" alt="Логотип Device">
+          </li>
+          <li class="page-main__logotypes-item">
+            <img class="page-header__logo" src="https://via.placeholder.com/260x100" alt="Логотип Device">
+          </li>
+        </ul>
+      </section>
+      <section class="page-main__about">
+        <h2>О нас</h2>
+        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+        <ul class="page-main__about-delivery-list">
+          <li class="page-main__about-delivery-item">Деловые линии</li>
+          <li class="page-main__about-delivery-item">Автотрейдинг</li>
+          <li class="page-main__about-delivery-item">ЖелДорЭкспедиция</li>
+        </ul>
+        <a href="#" class="page-main__about-more">Подробнее о нас</a>
+      </section>
+      <section class="page-main__contact">
+        <h2>Контакты</h2>
+        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <img class="page-header__logo" src="https://via.placeholder.com/560x222" alt="Логотип Device">
+        <a href="#" class="page-main__contact-more">Напишите нам</a>
+      </section>
+    </main>
 
+    <footer class="page-footer">
+      <div class="page-footer__left-side">
+        <img class="page-footer__logo" src="https://via.placeholder.com/163x35" alt="Логотип Device">
+        <address>г. Москва, ул. Строителей, 15</address>
+      </div>
+      <div class="page-footer__middle">
+        <ul class="page-footer__shop-controls-list">
+          <li class="page-footer__control">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="page-footer__control">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="page-footer__control">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="page-footer__social-list">
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-link">
+              <img class="page-footer__logo" src="https://via.placeholder.com/32x32" alt="Логотип Device">
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-link">
+              <img class="page-footer__logo" src="https://via.placeholder.com/32x32" alt="Логотип Device">
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-link">
+              <img class="page-footer__logo" src="https://via.placeholder.com/32x32" alt="Логотип Device">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__right-side">
+        <ul class="page-footer__controls-list">
+          <li class="page-footer__control">
+            <a href="#">Войти</a>
+          </li>
+          <li class="page-footer__control">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="page-footer__control">
+            <a href="#">Корзина</a>
+          </li>
+        </ul>
+        <a href="tel:+7 (495) 495-95-95" class="page-footer__tel">Тел.: +7 (495) 495-95-95</a>
+        <a href="#" class="page-footer__htmlacademy-link">
+          <img class="page-footer__htmlacademy-logo" src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy">
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
