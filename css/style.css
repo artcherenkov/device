@@ -17,10 +17,6 @@ input[type="checkbox"].visually-hidden {
   position: relative;
 }
 
-/*
-    GRID
-*/
-
 .page-header {
   display: grid;
 }
@@ -351,7 +347,7 @@ input[type="checkbox"].visually-hidden {
     About & Contact
 */
 
-.page-main__container {
+.page-main__container-aboutcontanct {
   width: 1160px;
   margin: 0 auto;
   display: grid;
@@ -505,8 +501,20 @@ input[type="checkbox"].visually-hidden {
   align-items: flex-end;
 }
 
+.page-footer__user-wrapper {
+  position: relative;
+}
+
+.page-footer__user {
+  position: absolute;
+  top: 0;
+  left: -170px;
+  text-align: right;
+}
+
 .page-footer__controls-list a,
 .page-footer__user {
+  margin: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -515,14 +523,41 @@ input[type="checkbox"].visually-hidden {
   text-decoration: none;
 }
 
+.page-header__user-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.page-header__user {
+  margin: 0 20px 0 0;
+}
+
+/*
+    Header каталога
+*/
+
 .page-main__header {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
+  padding-left: 100px;
+}
+
+.page-main__breadcrumbs-list {
+  padding: 0;
+  padding-left: 100px;
+  list-style: none;
+  display: flex;
+  margin: 0 0 50px;
+}
+
+.page-main__breadcrumbs-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .page-main__breadcrumbs-list a {
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 19px;
@@ -531,19 +566,88 @@ input[type="checkbox"].visually-hidden {
   text-decoration: none;
 }
 
-.page-main__sort,
-.page-main__filter {
-  background: #e5e5e5;
+.page-main__header-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.page-main {
+  position: relative;
+}
+
+.page-main__container {
+  width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 368px auto;
+  grid-column-gap: 0;
+  position: relative;
+}
+
+.page-main__products-wrapper {
+  position: relative;
+}
+
+.page-main__products-wrapper::after {
+  content: "";
+  width: 100%;
+  top: 0;
+  height: 70px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+.page-main__products-wrapper::before {
+  content: "";
+  top: 0;
+  right: calc(50% + 252px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: -2;
+}
+
+.page-main__sort-wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
 }
 
 .page-main__sort-header,
 .page-main__filter-header {
+  margin: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.page-main__filter-header {
+  margin-top: 25px;
+  margin-left: 100px;
+}
+
+.page-main__sort-header {
+  /*margin-top: 0;*/
+  margin-right: 74px;
+
+  /*margin-bottom: 94px;*/
+}
+
+.page-main__sort-options {
+  margin: 0;
+  /*margin-top: 25px;*/
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.page-main__sort-option:not(:last-child) {
+  margin-right: 30px;
 }
 
 .page-main__sort-option-link {
@@ -557,6 +661,23 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__sort-option-link--active {
   opacity: 1;
+}
+
+.page-main__products {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-row-gap: 40px;
+  margin-left: 72px;
+  margin-right: 40px;
+}
+
+.page-main__products-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
 }
 
 .page-main__product-description {
@@ -575,8 +696,30 @@ input[type="checkbox"].visually-hidden {
   letter-spacing: 0.05em;
 }
 
+.page-main__products-pagination-wrapper {
+  margin: 30px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .page-main__products-pagination {
   background: #ebebeb;
+  margin-bottom: 78px;
+}
+
+.page-main__products-page-nums {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.page-main__products-page-num:not(:last-child) {
+  margin-right: 30px;
+}
+
+.page-main__products-pagination p {
+  margin: 0;
 }
 
 .page-main__products-pagination a {
