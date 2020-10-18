@@ -64,10 +64,64 @@
       </div>
       <div class="page-main__products-wrapper">
         <div class="page-main__container">
-          <aside class="page-main__filter">
-            <div class="page-main__filter-wrapper">
-              <h2 class="page-main__filter-header">Фильтр:</h2>
-              <form action="https://echo.htmlacademy.ru/"></form>
+          <aside class="page-main__filter filter">
+            <div class="filter__wrapper">
+              <h2 class="filter__header">Фильтр:</h2>
+              <form class="filter__form" action="https://echo.htmlacademy.ru/">
+                <fieldset class="filter__fieldset filter__fieldset--price">
+                  <h2 class="filter__fieldset-header">Стоимость</h2>
+                  <div class="filter__slider">
+                    <div class="filter__slider-line"></div>
+                    <div class="filter__slider-control filter__slider-control--left"></div>
+                    <div class="filter__slider-control filter__slider-control--right"></div>
+                    <span class="filter__slider-range filter__slider-range--left">
+                      от 0
+                    </span>
+                    <span class="filter__slider-range filter__slider-range--right">
+                      до 5000
+                    </span>
+                  </div>
+                </fieldset>
+                <fieldset class="filter__fieldset filter__fieldset--color">
+                  <h2 class="filter__fieldset-header">Цвет</h2>
+                  <ul class="filter__checkboxes-list">
+                    <li class="filter__checkboxes-item">
+                      <input class="filter__checkbox" type="checkbox" id="cb-black" name="black" checked>
+                      <label class="filter__checkbox-label" for="cb-black">Черный</label>
+                    </li>
+                    <li class="filter__checkboxes-item">
+                      <input class="filter__checkbox" type="checkbox" id="cb-white" name="white">
+                      <label class="filter__checkbox-label" for="cb-white">Белый</label>
+                    </li>
+                    <li class="filter__checkboxes-item">
+                      <input class="filter__checkbox" type="checkbox" id="cb-blue" name="blue" checked>
+                      <label class="filter__checkbox-label" for="cb-blue">Синий</label>
+                    </li>
+                    <li class="filter__checkboxes-item">
+                      <input class="filter__checkbox" type="checkbox" id="cb-red" name="red" checked>
+                      <label class="filter__checkbox-label" for="cb-red">Красный</label>
+                    </li>
+                    <li class="filter__checkboxes-item">
+                      <input class="filter__checkbox" type="checkbox" id="cb-pink" name="pink">
+                      <label class="filter__checkbox-label" for="cb-pink">Розовый</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="filter__fieldset filter__fieldset--bluetooth">
+                  <h2 class="filter__fieldset-header">Bluetooth</h2>
+                  <ul class="filter__radio-list">
+                    <li class="filter__radio-item">
+                      <input class="filter__radio" type="radio" id="radio-yes" name="bluetooth" value="yes" checked>
+                      <label class="filter__radio-label" for="radio-yes">Есть</label>
+                    </li>
+                    <li class="filter__radio-item">
+                      <input class="filter__radio" type="radio" id="radio-no" name="bluetooth" value="no">
+                      <label class="filter__radio-label" for="radio-no">Нет</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <button class="filter__submit" type="submit">Показать</button>
+              </form>
             </div>
           </aside>
           <section class="page-main__products">
