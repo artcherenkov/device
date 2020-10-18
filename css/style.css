@@ -113,6 +113,25 @@ input[type="checkbox"].visually-hidden {
   justify-content: space-between;
 }
 
+.page-header__user-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.page-header__user {
+  margin: 0 20px 0 0;
+}
+
+.page-header__catalog-menu {
+  height: 146px;
+  width: 100%;
+  background: #f7e296;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
 /*
     Slider
 */
@@ -204,8 +223,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__popular-list {
-  margin: 0;
-  margin-bottom: 124px;
+  margin: 0 0 124px;
   padding: 0;
   list-style: none;
   display: grid;
@@ -357,9 +375,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__about h2,
 .page-main__contact h2 {
-  margin: 0;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
@@ -369,12 +385,11 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__about p,
 .page-main__contact p {
-  margin: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 28px;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
 }
 
 .page-main__about p:nth-of-type(2) {
@@ -382,8 +397,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__about-delivery-list {
-  margin: 0;
-  margin-bottom: 84px;
+  margin: 0 0 84px;
 }
 
 .page-main__about-delivery-item:not(:last-child) {
@@ -523,18 +537,13 @@ input[type="checkbox"].visually-hidden {
   text-decoration: none;
 }
 
-.page-header__user-wrapper {
-  position: relative;
-  display: flex;
-}
-
-.page-header__user {
-  margin: 0 20px 0 0;
-}
-
 /*
     Header каталога
 */
+
+.page-main {
+  position: relative;
+}
 
 .page-main__header {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -544,9 +553,13 @@ input[type="checkbox"].visually-hidden {
   padding-left: 100px;
 }
 
+.page-main__header-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .page-main__breadcrumbs-list {
-  padding: 0;
-  padding-left: 100px;
+  padding: 0 0 0 100px;
   list-style: none;
   display: flex;
   margin: 0 0 50px;
