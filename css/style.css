@@ -88,20 +88,30 @@ input[type="checkbox"].visually-hidden {
 }
 
 #page-header__search {
-  margin-left: 38px;
+  margin-left: 22px;
   font-family: "Open Sans", "Arial", sans-serif;
   background-color: transparent;
   border: none;
   font-size: 15px;
   font-weight: 300;
   line-height: 20px;
-
   color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+}
 
+.page-header__search-label {
+  display: flex;
+  align-items: center;
 }
 
 .page-header__control:nth-child(2) a:first-child {
   margin-right: 38px;
+}
+
+.page-header__control-link {
+  display: flex;
+  align-items: center;
 }
 
 .page-header__shop-control--double {
@@ -122,14 +132,52 @@ input[type="checkbox"].visually-hidden {
   margin: 0 20px 0 0;
 }
 
+.page-header__catalog-control-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__catalog-rollup-btn {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+}
+
 .page-header__catalog-menu {
-  height: 146px;
   width: 100%;
   background: #f7e296;
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: 1;
+  padding-bottom: 46px;
+  padding-top: 20px;
+}
+
+.catalog-menu__list {
+  padding: 0;
+  margin: 0;
+  margin-left: 60px;
+  width: 532px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 61px;
+  grid-row-gap: 20px;
+}
+
+.catalog-menu__item--grow2 {
+  grid-column: 2 / 4;
+}
+
+.catalog-menu__link {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: black;
+  text-decoration: none;
 }
 
 /*
@@ -146,6 +194,31 @@ input[type="checkbox"].visually-hidden {
   grid-template-columns: min-content 500px;
   margin-left: 89px;
   margin-right: 60px;
+  position: relative;
+}
+
+.slide-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-content__line {
+  width: 100px;
+  height: 7px;
+  position: absolute;
+  background-color: white;
+  top: 51px;
+}
+
+.slide__number {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 900;
+  font-size: 179px;
+  position: absolute;
+  color: white;
+  top: -8px;
+  right: 0;
 }
 
 .page-main__slide-image {
@@ -158,8 +231,7 @@ input[type="checkbox"].visually-hidden {
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
-  margin: 0;
-  margin-top: 95px;
+  margin: 93px 0 0;
 }
 
 .page-main__slide-description {
@@ -172,6 +244,11 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__slide-more-btn {
+  color: black;
+  display: flex;
+  position: relative;
+  margin-bottom: 50px;
+  justify-content: center;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -179,11 +256,28 @@ input[type="checkbox"].visually-hidden {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  height: 1em;
+  width: 220px;
+  text-align: center;
+}
+
+.page-main__slide-more-btn::after {
+  content: "";
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  background-color: #f0c52e;
+  top: 7px;
+}
+
+.page-main__slide-more-btn span {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 20;
 }
 
 .page-main__slide-features {
-  margin: 0;
+  margin: auto 0 0;
   padding: 0;
   list-style: none;
   display: grid;
@@ -280,10 +374,10 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__services-list {
-  margin: 0;
   padding: 0;
   list-style: none;
   position: relative;
+  margin: -20px 0 0;
 }
 
 .page-main__services-list::after {
@@ -304,21 +398,51 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 154px;
 }
 
-.page-main__services-item a {
+.page-main__services-item {
+  position: relative;
+
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
-  padding: 9px 136px 9px 19px;
+
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  padding: 10px 0 12px 19px;
+  height: 1em;
+  width: 277px;
+}
+
+.page-main__services-item a {
+  position: absolute;
+  width: 160px;
+  text-align: center;
   text-decoration: none;
   color: black;
+  z-index: 20;
+}
+
+.page-main__services-item a::after {
+  content: "";
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  background-color: #f0c52e;
+  top: 7px;
+  left: 0;
+  z-index: -1;
+}
+
+.page-main__services-item--active {
+  background-color: black;
 }
 
 .page-main__services-item--active a {
   color: #f7e296;
-  background-color: black;
+}
+
+.page-main__services-item--active a::after {
+  display: none;
 }
 
 .page-main__services-body {
@@ -359,6 +483,16 @@ input[type="checkbox"].visually-hidden {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 40px;
+}
+
+.page-main__logotypes-image {
+  opacity: 0.3;
+  filter: grayscale(1);
+}
+
+.page-main__logotypes-image:hover {
+  filter: grayscale(0);
+  opacity: 1;
 }
 
 /*
@@ -414,15 +548,41 @@ input[type="checkbox"].visually-hidden {
 .page-main__about-more,
 .page-main__contact-more {
   display: block;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 86px;
+
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: black;
+
+  position: relative;
+  height: 1em;
+  width: 260px;
+}
+
+.page-main__about-more span,
+.page-main__contact-more span {
+  position: absolute;
+  width: 260px;
+  text-align: center;
   text-decoration: none;
-  margin-bottom: 86px;
+  color: black;
+}
+
+.page-main__about-more span::after,
+.page-main__contact-more span::after {
+  content: "";
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  background: #f0c52e;
+  top: 7px;
+  left: 0;
+  z-index: -1;
 }
 
 .page-main__contact-map {
@@ -449,6 +609,11 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 40px;
 }
 
+.page-footer__left-side {
+  display: flex;
+  flex-direction: column;
+}
+
 .page-footer__left-side address,
 .page-footer__tel {
   font-family: "Open Sans", "Arial", sans-serif;
@@ -458,6 +623,14 @@ input[type="checkbox"].visually-hidden {
   font-style: normal;
   color: #ffffff;
   text-decoration: none;
+}
+
+.page-footer__left-side::after {
+  content: "";
+  height: 7px;
+  width: 80px;
+  background: #ffc600;
+  margin-top: 80px;
 }
 
 .page-footer__middle {
@@ -493,6 +666,15 @@ input[type="checkbox"].visually-hidden {
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
+}
+
+.page-footer__control-link {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__control-link svg {
+  fill: #ffc600;
 }
 
 .page-footer__controls-list {
