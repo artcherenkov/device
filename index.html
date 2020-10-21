@@ -19,17 +19,17 @@
             </label>
           </li>
           <li class="page-header__control">
-            <a class="page-header__control-link" href="#">
+            <a class="page-header__control-link page-header__control-link--login" href="#">
               <img src="img/icon-user.svg" alt="">
               Войти
             </a>
           </li>
           <li class="page-header__control page-header__control--double">
-            <a class="page-header__control-link" href="#">
+            <a class="page-header__control-link page-header__control-link--compare" href="#">
               <img src="img/icon-chart.svg" alt="">
               Сравнить
             </a>
-            <a class="page-header__control-link" href="#">
+            <a class="page-header__control-link page-header__control-link--cart" href="#">
               <img src="img/icon-cart.svg" alt="">
               Корзина
             </a>
@@ -38,27 +38,27 @@
         <ul class="page-header__shop-controls-list">
           <li class="page-header__control">
             <div class="page-header__catalog-control-wrapper">
-              <a class="page-header__catalog-control" href="catalog.html">Каталог товаров</a>
+              <a class="page-header__catalog-control page-header__catalog-control--catalog" href="catalog.html">Каталог товаров</a>
               <button class="page-header__catalog-rollup-btn">
                 <img src="img/icon-plus.svg" alt="Развернуть список типов товаров">
               </button>
             </div>
           </li>
-          <li class="page-header__control">
-            <a href="#">
+          <li class="page-header__control page-header__control--double">
+            <a class="page-header__delivery-link" href="#">
               Доставка
             </a>
-            <a href="#">
+            <a class="page-header__warranty-link" href="#">
               Гарантия
             </a>
           </li>
-          <li class="page-header__control page-header__shop-control--double">
-            <a href="#">
+          <li class="page-header__control">
+            <a class="page-header__contacts-link" href="#">
               Контакты
             </a>
           </li>
         </ul>
-        <div class="page-header__catalog-menu catalog-menu ">
+        <div class="page-header__catalog-menu catalog-menu visually-hidden">
           <ul class="catalog-menu__list">
             <li class="catalog-menu__item">
               <a href="#" class="catalog-menu__link">Виртуальная реальность</a>
@@ -94,7 +94,7 @@
               <h2>Делай селфи, как&nbsp;Бен&nbsp;Стиллер!</h2>
             </header>
             <p class="page-main__slide-description">
-              Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+              Самая длинная палка для селфи доступна в нашем магазине. Восемь&nbsp;(Восемь, Карл!) метров длиной и весом всего 5 килограмм.
             </p>
             <div class="page-main__slide-more">
               <div class="page-main__slide-controls">
@@ -102,9 +102,21 @@
                   <span>Подробнее</span>
                 </a>
                 <div class="page-main__slide-toggles">
-                  <p class="page-main__slider-toggle page-main__slider-toggle--active"></p>
-                  <p class="page-main__slider-toggle"></p>
-                  <p class="page-main__slider-toggle"></p>
+                  <p class="page-main__slider-toggle page-main__slider-toggle--active">
+                    <span class="page-main__slider-button page-main__slider-button--active">
+                      <img src="img/slider-button-active.svg" alt="">
+                    </span>
+                  </p>
+                  <p class="page-main__slider-toggle">
+                    <span class="page-main__slider-button">
+                      <img src="img/slider-button.svg" alt="">
+                    </span>
+                  </p>
+                  <p class="page-main__slider-toggle">
+                    <span class="page-main__slider-button">
+                      <img src="img/slider-button.svg" alt="">
+                    </span>
+                  </p>
                 </div>
               </div>
               <ul class="page-main__slide-features">
@@ -117,7 +129,7 @@
                   <p>5 кг<span>Вес палки</span>
                   </p>
                 </li>
-                <li class="page-main__slide-feature">
+                <li class="page-main__slide-feature page-main__slide-feature--material">
                   <p>Карбон<span>Материал</span>
                   </p>
                 </li>
@@ -287,12 +299,12 @@
       <div class="page-main__container-aboutcontanct">
         <section class="page-main__about">
           <h2>О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который&nbsp;есть&nbsp;в&nbsp;каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России!&nbsp;DEVICE&nbsp;работает со многими транспортными компаниями:</p>
           <ul class="page-main__about-delivery-list">
-            <li class="page-main__about-delivery-item">Деловые линии</li>
-            <li class="page-main__about-delivery-item">Автотрейдинг</li>
-            <li class="page-main__about-delivery-item">ЖелДорЭкспедиция</li>
+            <li class="page-main__about-delivery-item"><p>Деловые линии</p></li>
+            <li class="page-main__about-delivery-item"><p>Автотрейдинг</p></li>
+            <li class="page-main__about-delivery-item"><p>ЖелДорЭкспедиция</p></li>
           </ul>
           <a href="#" class="page-main__about-more">
             <span>Подробнее о нас</span>
@@ -361,7 +373,7 @@
         </div>
         <div class="page-footer__right-side">
           <ul class="page-footer__controls-list">
-            <li class="page-footer__control">
+            <li class="page-footer__control page-footer__control--login">
               <a class="page-footer__control-link page-footer__control-link--user" href="#">
                 <svg width="13" height="14" viewBox="0 0 13 14" fill="white" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z"/>
@@ -369,7 +381,7 @@
                 Войти
               </a>
             </li>
-            <li class="page-footer__control">
+            <li class="page-footer__control page-footer__control--compare">
               <a class="page-footer__control-link page-footer__control-link--compare" href="#">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="white" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.91675 5.36667H4.66675V11.0833H2.91675V5.36667ZM6.18342 2.91667H7.81675V11.0833H6.18342V2.91667ZM9.45008 7.58334H11.0834V11.0833H9.45008V7.58334Z"/>
@@ -377,7 +389,7 @@
                 Сравнить
               </a>
             </li>
-            <li class="page-footer__control">
+            <li class="page-footer__control page-footer__control--cart">
               <a class="page-footer__control-link page-footer__control-link--cart" href="#">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="white" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.86215 2.5217C9.79278 2.43991 9.69341 2.39316 9.58927 2.39316H7.65774V3.4188C7.65774 3.89008 7.25359 4.2735 6.75684 4.2735C6.26008 4.2735 5.85593 3.89008 5.85593 3.4188V2.39316H4.05413V3.4188C4.05413 3.89008 3.64999 4.2735 3.15323 4.2735C2.65648 4.2735 2.25233 3.89008 2.25233 3.4188V2.39316H0.32089C0.216656 2.39316 0.117286 2.43991 0.0479169 2.5217C-0.0215425 2.6035 -0.0544254 2.71256 -0.0425335 2.82145L0.605665 8.78461C0.617737 9.45692 1.14179 9.99999 1.78431 9.99999H8.12584C8.76828 9.99999 9.29233 9.45692 9.30449 8.78452L9.95269 2.82136C9.96449 2.71256 9.93161 2.6035 9.86215 2.5217Z"/>
