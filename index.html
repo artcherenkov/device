@@ -86,54 +86,41 @@
     </header>
 
     <main class="page-main">
-      <section class="page-main__slider">
-        <article class="page-main__slide slide">
-          <img class="page-main__slide-image" src="img/selfie-big.png" width="384" height="486" alt="Селфи-палка">
+      <section class="page-main__slider slider">
+        <div class="slider-toggles">
+          <p class="page-main__slider-toggle page-main__slider-toggle--active" tabindex="0" aria-label="Слайд 1"></p>
+          <p class="page-main__slider-toggle" tabindex="0" aria-label="Слайд 2"></p>
+          <p class="page-main__slider-toggle" tabindex="0" aria-label="Слайд 3"></p>
+        </div>
+        <article class="slide slide--active">
+          <img class="slide-image" src="img/selfie-big.png" width="384" height="486" alt="Селфи-палка">
           <span class="slide__number">01</span>
-          <div class="page-main__slide-content slide-content">
+          <div class="slide-content">
             <span class="slide-content__line"></span>
-            <header class="page-main__slide-header">
+            <header class="slide-header">
               <h2>Делай селфи, как&nbsp;Бен&nbsp;Стиллер!</h2>
             </header>
-            <p class="page-main__slide-description">
+            <p class="slide-description">
               Самая длинная палка для селфи доступна в нашем магазине. Восемь&nbsp;(Восемь, Карл!) метров длиной и весом
               всего 5 килограмм.
             </p>
-            <div class="page-main__slide-more">
-              <div class="page-main__slide-controls">
-                <a class="page-main__slide-more-btn" href="#" aria-label="Посмотреть подробную информацию о товаре">
+            <div class="slide-more">
+              <div class="slide-controls">
+                <a class="slide-more-btn" href="#" aria-label="Посмотреть подробную информацию о товаре">
                   <span>Подробнее</span>
                 </a>
-                <div class="page-main__slide-toggles">
-                  <p class="page-main__slider-toggle page-main__slider-toggle--active" tabindex="0"
-                     aria-label="Слайд 1">
-                    <span class="page-main__slider-button page-main__slider-button--active">
-                      <img src="img/slider-button-active.svg" alt="">
-                    </span>
-                  </p>
-                  <p class="page-main__slider-toggle" tabindex="0" aria-label="Слайд 2">
-                    <span class="page-main__slider-button">
-                      <img src="img/slider-button.svg" alt="">
-                    </span>
-                  </p>
-                  <p class="page-main__slider-toggle" tabindex="0" aria-label="Слайд 3">
-                    <span class="page-main__slider-button">
-                      <img src="img/slider-button.svg" alt="">
-                    </span>
-                  </p>
-                </div>
               </div>
-              <ul class="page-main__slide-features">
-                <li class="page-main__slide-feature">
+              <ul class="slide-features">
+                <li class="slide-feature">
                   <p>8,5 м
                     <span>Длина палки</span>
                   </p>
                 </li>
-                <li class="page-main__slide-feature">
+                <li class="slide-feature">
                   <p>5 кг<span>Вес палки</span>
                   </p>
                 </li>
-                <li class="page-main__slide-feature page-main__slide-feature--material">
+                <li class="slide-feature slide-feature--material">
                   <p>Карбон<span>Материал</span>
                   </p>
                 </li>
@@ -141,43 +128,25 @@
             </div>
           </div>
         </article>
-        <article class="page-main__slide slide visually-hidden">
-          <img class="page-main__slide-image" src="img/watch-big.png" width="345" height="485" alt="Смарт-часы">
+        <article class="slide slide--watch">
+          <img class="slide-image" src="img/watch-big.png" width="345" height="485" alt="Смарт-часы">
           <span class="slide__number">02</span>
-          <div class="page-main__slide-content slide-content">
+          <div class="slide-content slide-content">
             <span class="slide-content__line"></span>
-            <header class="page-main__slide-header">
-              <h2>Худеем правильно!</h2>
+            <header class="slide-header">
+              <h2>Худеем<br>правильно!</h2>
             </header>
-            <p class="page-main__slide-description">
-              Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+            <p class="slide-description">
+              Мотивирующие фитнес-браслеты помогут найти в себе силы не&nbsp;пропускать занятия и соблюдать диету.
             </p>
-            <div class="page-main__slide-more">
-              <div class="page-main__slide-controls">
-                <a class="page-main__slide-more-btn" href="#" aria-label="Посмотреть подробную информацию о товаре">
+            <div class="slide-more">
+              <div class="slide-controls">
+                <a class="slide-more-btn" href="#" aria-label="Посмотреть подробную информацию о товаре">
                   <span>Подробнее</span>
                 </a>
-                <div class="page-main__slide-toggles">
-                  <p class="page-main__slider-toggle" tabindex="0" aria-label="Слайд 1">
-                    <span class="page-main__slider-button">
-                      <img src="img/slider-button.svg" alt="">
-                    </span>
-                  </p>
-                  <p class="page-main__slider-toggle page-main__slider-toggle--active" tabindex="0"
-                     aria-label="Слайд 2">
-                    <span class="page-main__slider-button page-main__slider-button--active">
-                      <img src="img/slider-button-active.svg" alt="">
-                    </span>
-                  </p>
-                  <p class="page-main__slider-toggle" tabindex="0" aria-label="Слайд 3">
-                    <span class="page-main__slider-button">
-                      <img src="img/slider-button.svg" alt="">
-                    </span>
-                  </p>
-                </div>
               </div>
-              <ul class="page-main__slide-features">
-                <li class="page-main__slide-feature">
+              <ul class="slide-features">
+                <li class="slide-feature">
                   <p>48 часов
                     <span>Без подзарядки</span>
                   </p>
@@ -186,49 +155,31 @@
             </div>
           </div>
         </article>
-        <article class="page-main__slide slide visually-hidden">
-          <img class="page-main__slide-image" src="img/drone-big.png" width="526" height="334" alt="Дрон">
+        <article class="slide slide--drone">
+          <img class="slide-image" src="img/drone-big.png" width="526" height="334" alt="Дрон">
           <span class="slide__number">03</span>
-          <div class="page-main__slide-content slide-content">
+          <div class="slide-content slide-content">
             <span class="slide-content__line"></span>
-            <header class="page-main__slide-header">
+            <header class="slide-header">
               <h2>Порхает как бабочка, жалит как пчела!</h2>
             </header>
-            <p class="page-main__slide-description">
-              Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
+            <p class="slide-description">
+              Этот обычный, на первый взгляд, квадрокоптер оснащен мощным&nbsp;лазером, замаскированным под стандартную
               камеру.
             </p>
-            <div class="page-main__slide-more">
-              <div class="page-main__slide-controls">
-                <a class="page-main__slide-more-btn" href="#" aria-label="Посмотреть подробную информацию о товаре">
+            <div class="slide-more">
+              <div class="slide-controls">
+                <a class="slide-more-btn" href="#" aria-label="Посмотреть подробную информацию о товаре">
                   <span>Подробнее</span>
                 </a>
-                <div class="page-main__slide-toggles">
-                  <p class="page-main__slider-toggle" tabindex="0" aria-label="Слайд 1">
-                    <span class="page-main__slider-button">
-                      <img src="img/slider-button.svg" alt="">
-                    </span>
-                  </p>
-                  <p class="page-main__slider-toggle" tabindex="0" aria-label="Слайд 2">
-                    <span class="page-main__slider-button">
-                      <img src="img/slider-button.svg" alt="">
-                    </span>
-                  </p>
-                  <p class="page-main__slider-toggle page-main__slider-toggle--active" tabindex="0"
-                     aria-label="Слайд 3">
-                    <span class="page-main__slider-button page-main__slider-button--active">
-                      <img src="img/slider-button-active.svg" alt="">
-                    </span>
-                  </p>
-                </div>
               </div>
-              <ul class="page-main__slide-features">
-                <li class="page-main__slide-feature">
+              <ul class="slide-features">
+                <li class="slide-feature">
                   <p>800 м
                     <span>Дальность полёта</span>
                   </p>
                 </li>
-                <li class="page-main__slide-feature">
+                <li class="slide-feature">
                   <p>50 м
                     <span>Радиус поражения</span>
                   </p>
@@ -502,8 +453,8 @@
       </form>
     </section>
 
-<!--  Catalog toggle  -->
     <script src="js/catalog-list-toggle.js"></script>
     <script src="js/popup.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>

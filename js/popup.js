@@ -4,7 +4,6 @@ const popupForm = popup.querySelector(`.popup form`);
 const closePopupBtn = popup.querySelector(`.popup__close-btn`);
 
 const inputs = popup.querySelectorAll(`.popup__input-wrapper input`);
-console.log(inputs);
 
 const OPEN_POPUP_CLASS = `popup--opened`;
 
