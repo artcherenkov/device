@@ -1515,3 +1515,141 @@ input[type="checkbox"].visually-hidden {
 .page-main__products-page-num--active a {
   opacity: 1;
 }
+
+.popup {
+  width: 960px;
+  background-color: white;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: calc(50% - 960px / 2);
+  margin: auto;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.popup--opened {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.popup__content-wrapper {
+  position: relative;
+}
+
+.popup__close-btn {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #f7e296;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  top: 20px;
+}
+
+.popup__close-btn::after {
+  content: '';
+  background: url("../img/icon-cross.svg");
+  width: 30px;
+  height: 30px;
+}
+
+.popup__fieldset {
+  border: none;
+  margin: 92px 100px 73px;
+  grid-column-gap: 40px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 360px 360px;
+  grid-row-gap: 30px;
+}
+
+.popup__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__input-wrapper label {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.popup__input-wrapper input,
+textarea {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: black;
+  background: #f2f2f2;
+  border: none;
+  padding: 16px 0 16px 20px;
+}
+
+textarea {
+  height: 136px;
+  resize: none;
+}
+
+.popup__input-wrapper input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.popup__input-wrapper--double {
+  grid-column: 1 / span 2;
+  margin-bottom: 24px;
+}
+
+.popup__form-submit {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+
+  background: transparent;
+  border: none;
+
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  position: relative;
+  height: 1em;
+  width: 200px;
+}
+
+.popup__form-submit span {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  top: 0;
+  left: 0;
+}
+
+.popup__form-submit span::after {
+  content: "";
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  background: #f7e296;
+  top: 7px;
+  left: 0;
+  z-index: -1;
+}
