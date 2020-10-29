@@ -37,7 +37,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-header {
   max-width: 1160px;
-  background-color: rgba(247, 226, 150, 1);
+  background-color: #f7e296;
   margin: 40px auto 0;
 
   position: relative;
@@ -1082,15 +1082,8 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 15px;
 }
 
-.filter__checkbox {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  visibility: hidden;
-}
-
-.filter__checkbox:focus + .filter__checkbox-label::before {
-  border: 2px solid red;
+.filter__checkbox:focus + .filter__checkbox-label {
+  opacity: 0.6;
 }
 
 .filter__checkbox:checked + .filter__checkbox-label::after {
@@ -1147,15 +1140,8 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 16px;
 }
 
-.filter__radio {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  visibility: hidden;
-}
-
-.filter__radio:focus + .filter__radio-label::before {
-  border: 2px solid red;
+.filter__radio:focus + .filter__radio-label {
+  opacity: 0.6;
 }
 
 .filter__radio:checked + .filter__radio-label::after {
@@ -1323,13 +1309,20 @@ input[type="checkbox"].visually-hidden {
   margin-left: auto;
 }
 
-.page-main__sort-asc {
+.page-main__sort-control {
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.page-main__sort-control--asc {
   margin-right: 17px;
   transform: rotate(180deg);
   margin-bottom: 5px;
 }
 
-.page-main__sort-desc {
+.page-main__sort-control--desc {
   margin-top: 4px;
 }
 

@@ -16,24 +16,24 @@
         <ul class="page-header__controls-list">
           <li class="page-header__control">
             <label class="page-header__search-label" for="page-header__search">
-              <img src="img/icon-search.svg" alt="">
+              <img src="img/icon-search.svg" aria-hidden="true" alt="">
               <input type="text" id="page-header__search" name="search" placeholder="Поиск по сайту">
             </label>
           </li>
           <li class="page-header__control page-header__control--logged-in">
             <div class="page-header__user-wrapper">
-              <img src="img/icon-user.svg" alt="">
+              <img src="img/icon-user.svg" aria-hidden="true" alt="">
               <p class="page-header__user">Валентин Петухов</p>
-              <a href="#">Выйти</a>
+              <a href="#" aria-label="Выйти из аккаунта">Выйти</a>
             </div>
           </li>
           <li class="page-header__control page-header__control--double">
-            <a class="page-header__control-link page-header__control-link--compare" href="#">
-              <img src="img/icon-chart.svg" alt="">
+            <a class="page-header__control-link page-header__control-link--compare" href="#" aria-label="Перейти к сравнению товаров">
+              <img src="img/icon-chart.svg" aria-hidden="true" alt="">
               Сравнить
             </a>
-            <a class="page-header__control-link page-header__control-link--cart" href="#">
-              <img src="img/icon-cart.svg" alt="">
+            <a class="page-header__control-link page-header__control-link--cart" href="#" aria-label="Перейти к корзине товаров">
+              <img src="img/icon-cart.svg" aria-hidden="true" alt="">
               Корзина
             </a>
           </li>
@@ -41,28 +41,28 @@
         <ul class="page-header__shop-controls-list">
           <li class="page-header__control">
             <div class="page-header__catalog-control-wrapper">
-              <a class="page-header__catalog-control page-header__catalog-control--catalog" href="catalog.html">Каталог
-                товаров</a>
+              <a class="page-header__catalog-control page-header__catalog-control--catalog" href="catalog.html">Каталог товаров</a>
               <button class="page-header__catalog-rollup-btn">
                 <img src="img/icon-plus.svg" alt="Развернуть список типов товаров">
               </button>
             </div>
           </li>
           <li class="page-header__control page-header__control--double">
-            <a class="page-header__delivery-link" href="#">
+            <a class="page-header__delivery-link" href="#" aria-label="Перейти на страницу с информацией о доставке">
               Доставка
             </a>
-            <a class="page-header__warranty-link" href="#">
+            <a class="page-header__warranty-link" href="#" aria-label="Перейти на страницу с информацией о гарантии">
               Гарантия
             </a>
           </li>
           <li class="page-header__control">
-            <a class="page-header__contacts-link" href="#">
+            <a class="page-header__contacts-link" href="#" aria-label="Перейти на страницу с информацией о контактах">
               Контакты
             </a>
           </li>
         </ul>
         <div class="page-header__catalog-menu catalog-menu catalog-menu--catalog visually-hidden">
+          <span class="visually-hidden">Список категорий товаров</span>
           <ul class="catalog-menu__list">
             <li class="catalog-menu__item">
               <a href="#" class="catalog-menu__link">Виртуальная реальность</a>
@@ -114,8 +114,10 @@
                   <h2 class="filter__fieldset-header">Стоимость</h2>
                   <div class="filter__slider">
                     <div class="filter__slider-line"></div>
-                    <div class="filter__slider-control filter__slider-control--left"></div>
-                    <div class="filter__slider-control filter__slider-control--right"></div>
+                    <div class="filter__slider-control filter__slider-control--left" tabindex="0"
+                         aria-label="Стоимость от"></div>
+                    <div class="filter__slider-control filter__slider-control--right" tabindex="0"
+                         aria-label="Стоимость до"></div>
                     <span class="filter__slider-range filter__slider-range--left">
                       от 0
                     </span>
@@ -128,23 +130,24 @@
                   <h2 class="filter__fieldset-header filter__fieldset-header--color">Цвет</h2>
                   <ul class="filter__checkboxes-list">
                     <li class="filter__checkboxes-item">
-                      <input class="filter__checkbox" type="checkbox" id="cb-black" name="black" checked>
+                      <input class="filter__checkbox visually-hidden" type="checkbox" id="cb-black" name="black"
+                             checked>
                       <label class="filter__checkbox-label" for="cb-black">Черный</label>
                     </li>
                     <li class="filter__checkboxes-item">
-                      <input class="filter__checkbox" type="checkbox" id="cb-white" name="white">
+                      <input class="filter__checkbox visually-hidden" type="checkbox" id="cb-white" name="white">
                       <label class="filter__checkbox-label" for="cb-white">Белый</label>
                     </li>
                     <li class="filter__checkboxes-item">
-                      <input class="filter__checkbox" type="checkbox" id="cb-blue" name="blue" checked>
+                      <input class="filter__checkbox visually-hidden" type="checkbox" id="cb-blue" name="blue" checked>
                       <label class="filter__checkbox-label" for="cb-blue">Синий</label>
                     </li>
                     <li class="filter__checkboxes-item">
-                      <input class="filter__checkbox" type="checkbox" id="cb-red" name="red" checked>
+                      <input class="filter__checkbox visually-hidden" type="checkbox" id="cb-red" name="red" checked>
                       <label class="filter__checkbox-label" for="cb-red">Красный</label>
                     </li>
                     <li class="filter__checkboxes-item">
-                      <input class="filter__checkbox" type="checkbox" id="cb-pink" name="pink">
+                      <input class="filter__checkbox visually-hidden" type="checkbox" id="cb-pink" name="pink">
                       <label class="filter__checkbox-label" for="cb-pink">Розовый</label>
                     </li>
                   </ul>
@@ -153,11 +156,13 @@
                   <h2 class="filter__fieldset-header filter__fieldset-header--bluetooth">Bluetooth</h2>
                   <ul class="filter__radio-list">
                     <li class="filter__radio-item">
-                      <input class="filter__radio" type="radio" id="radio-yes" name="bluetooth" value="yes" checked>
+                      <input class="filter__radio visually-hidden" type="radio" id="radio-yes" name="bluetooth"
+                             value="yes" checked>
                       <label class="filter__radio-label" for="radio-yes">Есть</label>
                     </li>
                     <li class="filter__radio-item">
-                      <input class="filter__radio" type="radio" id="radio-no" name="bluetooth" value="no">
+                      <input class="filter__radio visually-hidden" type="radio" id="radio-no" name="bluetooth"
+                             value="no">
                       <label class="filter__radio-label" for="radio-no">Нет</label>
                     </li>
                   </ul>
@@ -184,41 +189,49 @@
                   </li>
                 </ul>
                 <div class="page-main__sort-direction">
-                  <span class="page-main__sort-asc">
+                  <button class="page-main__sort-control page-main__sort-control--asc"
+                          aria-label="Сортировать по возрастанию">
                     <img src="img/icon-down-dir.svg" width="18" height="18" alt="">
-                  </span>
-                  <span class="page-main__sort-desc">
+                  </button>
+                  <button class="page-main__sort-control page-main__sort-control--desc"
+                          aria-label="Сортировать по убыванию">
                     <img src="img/icon-down-dir.svg" width="18" height="18" alt="">
-                  </span>
+                  </button>
                 </div>
               </div>
             </section>
             <ul class="page-main__products-list">
               <li class="page-main__product page-main__product--1">
                 <div class="page-main__product-image-wrapper">
-                  <img class="page-main__product-image" src="img/catalog-item-1.png" width="360" height="380"
-                       alt="Логотип Device">
+                  <img class="page-main__product-image" src="img/catalog-item-1.png" width="360" height="380" alt="">
                   <div class="page-main__product-controls">
-                    <a href="#" class="page-main__product-to-cart">
+                    <a href="#" class="page-main__product-to-cart"
+                       aria-label="Добавить любительскую селфи-палку в корзину">
                       <span>В корзину</span>
                     </a>
-                    <a href="#" class="page-main__product-to-compare">Добавить к сравнению</a>
+                    <a href="#" class="page-main__product-to-compare"
+                       aria-label="Добавить любительскую селфи-палку к сравнению">
+                      Добавить к сравнению
+                    </a>
                   </div>
                 </div>
                 <div class="page-main__product-content">
-                  <h3 class="page-main__product-description">Любительская селфи-палка </h3>
+                  <h3 class="page-main__product-description">Любительская селфи-палка</h3>
                   <p class="page-main__product-price">500 руб.</p>
                 </div>
               </li>
               <li class="page-main__product page-main__product--2">
                 <div class="page-main__product-image-wrapper">
-                  <img class="page-main__product-image" src="img/catalog-item-2.png" width="360" height="380"
-                       alt="Логотип Device">
+                  <img class="page-main__product-image" src="img/catalog-item-2.png" width="360" height="380" alt="">
                   <div class="page-main__product-controls">
-                    <a href="#" class="page-main__product-to-cart">
+                    <a href="#" class="page-main__product-to-cart"
+                       aria-label="Добавить профессиональную селфи-палку в корзину">
                       <span>В корзину</span>
                     </a>
-                    <a href="#" class="page-main__product-to-compare">Добавить к сравнению</a>
+                    <a href="#" class="page-main__product-to-compare"
+                       aria-label="Добавить профессиональную селфи-палку к сравнению">
+                      Добавить к сравнению
+                    </a>
                   </div>
                 </div>
                 <div class="page-main__product-content">
@@ -228,13 +241,16 @@
               </li>
               <li class="page-main__product page-main__product--3">
                 <div class="page-main__product-image-wrapper">
-                  <img class="page-main__product-image" src="img/catalog-item-3.png" width="360" height="380"
-                       alt="Логотип Device">
+                  <img class="page-main__product-image" src="img/catalog-item-3.png" width="360" height="380" alt="">
                   <div class="page-main__product-controls">
-                    <a href="#" class="page-main__product-to-cart">
+                    <a href="#" class="page-main__product-to-cart"
+                       aria-label="Добавить непотопляемую селфи-палку в корзину">
                       <span>В корзину</span>
                     </a>
-                    <a href="#" class="page-main__product-to-compare">Добавить к сравнению</a>
+                    <a href="#" class="page-main__product-to-compare"
+                       aria-label="Добавить непотопляемую селфи-палку к сравнению">
+                      Добавить к сравнению
+                    </a>
                   </div>
                 </div>
                 <div class="page-main__product-content">
@@ -244,13 +260,16 @@
               </li>
               <li class="page-main__product page-main__product--4 page-main__product--new">
                 <div class="page-main__product-image-wrapper">
-                  <img class="page-main__product-image" src="img/catalog-item-4.png" width="360" height="380"
-                       alt="Логотип Device">
+                  <img class="page-main__product-image" src="img/catalog-item-4.png" width="360" height="380" alt="">
                   <div class="page-main__product-controls">
-                    <a href="#" class="page-main__product-to-cart">
+                    <a href="#" class="page-main__product-to-cart"
+                       aria-label="Добавить селфи-палку «Следуй за мной» в корзину">
                       <span>В корзину</span>
                     </a>
-                    <a href="#" class="page-main__product-to-compare">Добавить к сравнению</a>
+                    <a href="#" class="page-main__product-to-compare"
+                       aria-label="Добавить селфи-палку «Следуй за мной» к сравнению">
+                      Добавить к сравнению
+                    </a>
                   </div>
                 </div>
                 <div class="page-main__product-content">
@@ -262,21 +281,21 @@
             <div class="page-main__products-pagination">
               <div class="page-main__products-pagination-wrapper">
                 <p class="page-main__products-pagination-back">
-                  <a href="#">Назад</a>
+                  <a href="#" aria-label="Перейти на предыдущую страницу">Назад</a>
                 </p>
                 <ul class="page-main__products-page-nums">
                   <li class="page-main__products-page-num page-main__products-page-num--active">
-                    <a href="#">1</a>
+                    <a href="#" aria-label="Перейти на первую страницу">1</a>
                   </li>
                   <li class="page-main__products-page-num">
-                    <a href="#">2</a>
+                    <a href="#" aria-label="Перейти на вторую страницу">2</a>
                   </li>
                   <li class="page-main__products-page-num">
-                    <a href="#">3</a>
+                    <a href="#" aria-label="Перейти на третью страницу">3</a>
                   </li>
                 </ul>
                 <p class="page-main__products-pagination-forward">
-                  <a href="#">Вперед</a>
+                  <a href="#" aria-label="Перейти на следующую страницу">Вперед</a>
                 </p>
               </div>
             </div>
@@ -310,29 +329,29 @@
         <div class="page-footer__middle">
           <ul class="page-footer__shop-controls-list">
             <li class="page-footer__control">
-              <a href="#">Доставка</a>
+              <a href="#" aria-label="Перейти на страницу с информацией о доставке">Доставка</a>
             </li>
             <li class="page-footer__control">
-              <a href="#">Гарантия</a>
+              <a href="#" aria-label="Перейти на страницу с информацией о гарантии">Гарантия</a>
             </li>
             <li class="page-footer__control">
-              <a href="#">Контакты</a>
+              <a href="#" aria-label="Перейти на страницу с информацией о контактах">Контакты</a>
             </li>
           </ul>
           <ul class="page-footer__social-list">
             <li class="page-footer__social-item">
-              <a href="#" class="page-footer__social-link">
-                <img class="page-footer__social-logo" src="img/icon-facebook.svg" alt="Логотип Device">
+              <a href="#" class="page-footer__social-link" aria-label="Перейти на наш Facebook">
+                <img class="page-footer__social-logo" src="img/icon-facebook.svg" alt="">
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a href="#" class="page-footer__social-link">
-                <img class="page-footer__social-logo" src="img/icon-instagram.svg" alt="Логотип Device">
+              <a href="#" class="page-footer__social-link" aria-label="Перейти на наш Instagram">
+                <img class="page-footer__social-logo" src="img/icon-instagram.svg" alt="">
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a href="#" class="page-footer__social-link">
-                <img class="page-footer__social-logo" src="img/icon-twitter.svg" alt="Логотип Device">
+              <a href="#" class="page-footer__social-link" aria-label="Перейти на наш Twitter">
+                <img class="page-footer__social-logo" src="img/icon-twitter.svg" alt="">
               </a>
             </li>
           </ul>
@@ -341,7 +360,7 @@
           <ul class="page-footer__controls-list">
             <li class="page-footer__control page-footer__control--login page-footer__control--logged-in">
               <div class="page-footer__user-wrapper">
-                <a href="#">Выйти</a>
+                <a href="#" aria-label="Выйти из аккаунта">Выйти</a>
                 <p class="page-footer__user">
                   <svg width="13" height="14" viewBox="0 0 13 14" fill="#f7e296" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -352,7 +371,7 @@
               </div>
             </li>
             <li class="page-footer__control page-footer__control--compare">
-              <a class="page-footer__control-link page-footer__control-link--compare" href="#">
+              <a class="page-footer__control-link page-footer__control-link--compare" href="#" aria-label="Перейти к сравнению товаров">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="white" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M2.91675 5.36667H4.66675V11.0833H2.91675V5.36667ZM6.18342 2.91667H7.81675V11.0833H6.18342V2.91667ZM9.45008 7.58334H11.0834V11.0833H9.45008V7.58334Z"/>
@@ -361,7 +380,7 @@
               </a>
             </li>
             <li class="page-footer__control page-footer__control--cart">
-              <a class="page-footer__control-link page-footer__control-link--cart" href="#">
+              <a class="page-footer__control-link page-footer__control-link--cart" href="#" aria-label="Перейти к корзине товаров">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="white" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M9.86215 2.5217C9.79278 2.43991 9.69341 2.39316 9.58927 2.39316H7.65774V3.4188C7.65774 3.89008 7.25359 4.2735 6.75684 4.2735C6.26008 4.2735 5.85593 3.89008 5.85593 3.4188V2.39316H4.05413V3.4188C4.05413 3.89008 3.64999 4.2735 3.15323 4.2735C2.65648 4.2735 2.25233 3.89008 2.25233 3.4188V2.39316H0.32089C0.216656 2.39316 0.117286 2.43991 0.0479169 2.5217C-0.0215425 2.6035 -0.0544254 2.71256 -0.0425335 2.82145L0.605665 8.78461C0.617737 9.45692 1.14179 9.99999 1.78431 9.99999H8.12584C8.76828 9.99999 9.29233 9.45692 9.30449 8.78452L9.95269 2.82136C9.96449 2.71256 9.93161 2.6035 9.86215 2.5217Z"/>
@@ -372,9 +391,9 @@
               </a>
             </li>
           </ul>
-          <a href="tel:+7 (495) 495-95-95" class="page-footer__tel">Тел.: +7 (495) 495-95-95</a>
-          <a href="#" class="page-footer__htmlacademy-link">
-            <img class="page-footer__htmlacademy-logo" src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy">
+          <a href="tel:+7 (495) 495-95-95" class="page-footer__tel" aria-label="Позвонить">Тел.: +7 (495) 495-95-95</a>
+          <a href="#" class="page-footer__htmlacademy-link" aria-label="Перейти к HTML Academy">
+            <img class="page-footer__htmlacademy-logo" src="img/logo-htmlacademy.svg" alt="">
           </a>
         </div>
       </div>

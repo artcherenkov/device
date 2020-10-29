@@ -14,23 +14,23 @@
         <ul class="page-header__controls-list">
           <li class="page-header__control">
             <label class="page-header__search-label" for="page-header__search">
-              <img src="img/icon-search.svg" alt="">
+              <img src="img/icon-search.svg" aria-hidden="true" alt="">
               <input type="text" id="page-header__search" name="search" placeholder="Поиск по сайту">
             </label>
           </li>
           <li class="page-header__control">
-            <a class="page-header__control-link page-header__control-link--login" href="#">
-              <img src="img/icon-user.svg" alt="">
+            <a class="page-header__control-link page-header__control-link--login" aria-label="Войти в аккаунт" href="#">
+              <img src="img/icon-user.svg" aria-hidden="true" alt="">
               Войти
             </a>
           </li>
           <li class="page-header__control page-header__control--double">
             <a class="page-header__control-link page-header__control-link--compare" href="#">
-              <img src="img/icon-chart.svg" alt="">
+              <img src="img/icon-chart.svg" aria-hidden="true" alt="">
               Сравнить
             </a>
             <a class="page-header__control-link page-header__control-link--cart" href="#">
-              <img src="img/icon-cart.svg" alt="">
+              <img src="img/icon-cart.svg" aria-hidden="true" alt="">
               Корзина
             </a>
           </li>
@@ -45,20 +45,21 @@
             </div>
           </li>
           <li class="page-header__control page-header__control--double">
-            <a class="page-header__delivery-link" href="#">
+            <a class="page-header__delivery-link" href="#" aria-label="Перейти на страницу с информацией о доставке">
               Доставка
             </a>
-            <a class="page-header__warranty-link" href="#">
+            <a class="page-header__warranty-link" href="#" aria-label="Перейти на страницу с информацией о гарантии">
               Гарантия
             </a>
           </li>
           <li class="page-header__control">
-            <a class="page-header__contacts-link" href="#">
+            <a class="page-header__contacts-link" href="#" aria-label="Перейти на страницу с информацией о контактах">
               Контакты
             </a>
           </li>
         </ul>
         <div class="page-header__catalog-menu catalog-menu visually-hidden">
+        <span class="visually-hidden">Список категорий товаров</span>
           <ul class="catalog-menu__list">
             <li class="catalog-menu__item">
               <a href="#" class="catalog-menu__link">Виртуальная реальность</a>
@@ -98,21 +99,21 @@
             </p>
             <div class="page-main__slide-more">
               <div class="page-main__slide-controls">
-                <a class="page-main__slide-more-btn" href="#">
+                <a class="page-main__slide-more-btn" href="#" aria-label="Посмотреть подробную информацию о товаре">
                   <span>Подробнее</span>
                 </a>
                 <div class="page-main__slide-toggles">
-                  <p class="page-main__slider-toggle page-main__slider-toggle--active">
+                  <p class="page-main__slider-toggle page-main__slider-toggle--active" tabindex="0" aria-label="Слайд 1">
                     <span class="page-main__slider-button page-main__slider-button--active">
                       <img src="img/slider-button-active.svg" alt="">
                     </span>
                   </p>
-                  <p class="page-main__slider-toggle">
+                  <p class="page-main__slider-toggle" tabindex="0" aria-label="Слайд 2">
                     <span class="page-main__slider-button">
                       <img src="img/slider-button.svg" alt="">
                     </span>
                   </p>
-                  <p class="page-main__slider-toggle">
+                  <p class="page-main__slider-toggle" tabindex="0" aria-label="Слайд 3">
                     <span class="page-main__slider-button">
                       <img src="img/slider-button.svg" alt="">
                     </span>
@@ -232,9 +233,10 @@
         </article>
       </section>
       <section class="page-main__popular">
+        <span class="visually-hidden">Популярные категории товаров</span>
         <ul class="page-main__popular-list">
           <li class="page-main__popular-item">
-            <a href="#" class="page-main__popular-item-wrapper">
+            <a href="#" class="page-main__popular-item-wrapper" aria-label="Перейти к категории 'Виртуальная реальность'">
               <div class="page-main__popular-picture">
                 <img src="img/vr-small.svg" alt="Логотип Device">
               </div>
@@ -242,7 +244,7 @@
             </a>
           </li>
           <li class="page-main__popular-item">
-            <a href="#" class="page-main__popular-item-wrapper">
+            <a href="#" class="page-main__popular-item-wrapper" aria-label="Перейти к категории 'Моноподы для селфи'">
               <div class="page-main__popular-picture">
                 <img src="img/selfie-small.svg" alt="Логотип Device">
               </div>
@@ -250,7 +252,7 @@
             </a>
           </li>
           <li class="page-main__popular-item">
-            <a href="#" class="page-main__popular-item-wrapper">
+            <a href="#" class="page-main__popular-item-wrapper" aria-label="Перейти к категории 'Экшн-камеры'">
               <div class="page-main__popular-picture">
                 <img src="img/camera-small.svg" alt="Логотип Device">
               </div>
@@ -258,7 +260,7 @@
             </a>
           </li>
           <li class="page-main__popular-item">
-            <a href="#" class="page-main__popular-item-wrapper page-main__popular-item--band">
+            <a href="#" class="page-main__popular-item-wrapper page-main__popular-item--band" aria-label="Перейти к категории 'Фитнес-браслеты'">
               <div class="page-main__popular-picture">
                 <img src="img/band-small.svg" alt="Логотип Device">
               </div>
@@ -266,7 +268,7 @@
             </a>
           </li>
           <li class="page-main__popular-item">
-            <a href="#" class="page-main__popular-item-wrapper">
+            <a href="#" class="page-main__popular-item-wrapper" aria-label="Перейти к категории 'Умные часы'">
               <div class="page-main__popular-picture">
                 <img src="img/watch-small.svg" alt="Логотип Device">
               </div>
@@ -274,7 +276,7 @@
             </a>
           </li>
           <li class="page-main__popular-item">
-            <a href="#" class="page-main__popular-item-wrapper">
+            <a href="#" class="page-main__popular-item-wrapper" aria-label="Перейти к категории 'Квадрокоптеры'">
               <div class="page-main__popular-picture">
                 <img src="img/drone-small.svg" alt="Логотип Device">
               </div>
@@ -284,19 +286,20 @@
         </ul>
       </section>
       <section class="page-main__services">
+        <span class="visually-hidden">Наши сервисы</span>
         <div class="page-main__services-wrapper">
           <ul class="page-main__services-list">
             <li class="page-main__services-item page-main__services-item--active">
-              <a href="#"><span>Доставка</span></a>
+              <a href="#" aria-label="Перейти к категории 'Доставка'"><span>Доставка</span></a>
             </li>
             <li class="page-main__services-item">
-              <a href="#"><span>Гарантия</span></a>
+              <a href="#" aria-label="Перейти к категории 'Гарантия'"><span>Гарантия</span></a>
             </li>
             <li class="page-main__services-item">
-              <a href="#"><span>Кредит</span></a>
+              <a href="#" aria-label="Перейти к категории 'Кредит'"><span>Кредит</span></a>
             </li>
           </ul>
-          <div class="page-main__services-body">
+          <div class="page-main__services-body page-main__services-body--active">
             <h2>Доставка</h2>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду&nbsp;совершенно бесплатно! Ведь мы неплохо заработаем,&nbsp;поднимая его на ваш этаж.</p>
             <img class="page-main__services-body-image page-main__services-body-image--delivery" src="img/icon-delivery.svg" alt="">
@@ -306,7 +309,7 @@
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
             <img class="page-main__services-body-image page-main__services-body-image--warranty" src="img/icon-warranty.svg" alt="">
           </div>
-          <div class="page-main__services-body page-main__services-body--active">
+          <div class="page-main__services-body">
             <h2>Кредит</h2>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>условия кредита. Выгодные для нашего банка, разумеется.</p>
             <img class="page-main__services-body-image page-main__services-body-image--credit" src="img/icon-credit.svg" alt="">
@@ -316,28 +319,24 @@
       <section class="page-main__logotypes">
         <ul class="page-main__logotypes-list">
           <li class="page-main__logotypes-item">
-            <a href="" class="page-main__logotype-link">
-              <img class="page-main__logotypes-image" src="img/logo-dgi.png" width="260" height="100" alt="Логотип Device">
+            <a href="" class="page-main__logotype-link" aria-label="Перейти на сайт бренда DJI">
+              <img class="page-main__logotypes-image" src="img/logo-dgi.png" width="260" height="100" alt="Логотип DJI">
             </a>
-
           </li>
           <li class="page-main__logotypes-item">
-            <a href="" class="page-main__logotype-link">
-              <img class="page-main__logotypes-image" src="img/logo-spgadgets.png" width="260" height="100" alt="Логотип Device">
+            <a href="" class="page-main__logotype-link" aria-label="Перейти на сайт бренда SP GADGETS">
+              <img class="page-main__logotypes-image" src="img/logo-spgadgets.png" width="260" height="100" alt="Логотип SP GADGETS">
             </a>
-
           </li>
           <li class="page-main__logotypes-item">
-            <a href="" class="page-main__logotype-link">
-              <img class="page-main__logotypes-image" src="img/logo-gopro.png" width="260" height="100" alt="Логотип Device">
+            <a href="" class="page-main__logotype-link" aria-label="Перейти на сайт бренда GoPro">
+              <img class="page-main__logotypes-image" src="img/logo-gopro.png" width="260" height="100" alt="Логотип GoPro">
             </a>
-
           </li>
           <li class="page-main__logotypes-item">
-            <a href="" class="page-main__logotype-link">
-              <img class="page-main__logotypes-image" src="img/logo-vive.png" width="260" height="100" alt="Логотип Device">
+            <a href="" class="page-main__logotype-link" aria-label="Перейти на сайт бренда VIVE">
+              <img class="page-main__logotypes-image" src="img/logo-vive.png" width="260" height="100" alt="Логотип VIVE">
             </a>
-
           </li>
         </ul>
       </section>
@@ -351,7 +350,7 @@
             <li class="page-main__about-delivery-item"><p>Автотрейдинг</p></li>
             <li class="page-main__about-delivery-item"><p>ЖелДорЭкспедиция</p></li>
           </ul>
-          <a href="#" class="page-main__about-more">
+          <a href="#" class="page-main__about-more" aria-label="Перейти к подробной информации о нас">
             <span>Подробнее о нас</span>
           </a>
         </section>
@@ -389,29 +388,29 @@
         <div class="page-footer__middle">
           <ul class="page-footer__shop-controls-list">
             <li class="page-footer__control">
-              <a href="#">Доставка</a>
+              <a href="#" aria-label="Перейти на страницу с информацией о доставке">Доставка</a>
             </li>
             <li class="page-footer__control">
-              <a href="#">Гарантия</a>
+              <a href="#" aria-label="Перейти на страницу с информацией о гарантии">Гарантия</a>
             </li>
             <li class="page-footer__control">
-              <a href="#">Контакты</a>
+              <a href="#" aria-label="Перейти на страницу с информацией о контактах">Контакты</a>
             </li>
           </ul>
           <ul class="page-footer__social-list">
             <li class="page-footer__social-item">
-              <a href="#" class="page-footer__social-link">
-                <img class="page-footer__social-logo" src="img/icon-facebook.svg" alt="Логотип Device">
+              <a href="#" class="page-footer__social-link" aria-label="Перейти на наш Facebook">
+                <img class="page-footer__social-logo" src="img/icon-facebook.svg" alt="">
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a href="#" class="page-footer__social-link">
-                <img class="page-footer__social-logo" src="img/icon-instagram.svg" alt="Логотип Device">
+              <a href="#" class="page-footer__social-link" aria-label="Перейти на наш Instagram">
+                <img class="page-footer__social-logo" src="img/icon-instagram.svg" alt="">
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a href="#" class="page-footer__social-link">
-                <img class="page-footer__social-logo" src="img/icon-twitter.svg" alt="Логотип Device">
+              <a href="#" class="page-footer__social-link" aria-label="Перейти на наш Twitter">
+                <img class="page-footer__social-logo" src="img/icon-twitter.svg" alt="">
               </a>
             </li>
           </ul>
@@ -419,7 +418,7 @@
         <div class="page-footer__right-side">
           <ul class="page-footer__controls-list">
             <li class="page-footer__control page-footer__control--login">
-              <a class="page-footer__control-link page-footer__control-link--user" href="#">
+              <a class="page-footer__control-link page-footer__control-link--user" href="#" aria-label="Войти в аккаунт">
                 <svg width="13" height="14" viewBox="0 0 13 14" fill="white" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z"/>
                 </svg>
@@ -427,15 +426,16 @@
               </a>
             </li>
             <li class="page-footer__control page-footer__control--compare">
-              <a class="page-footer__control-link page-footer__control-link--compare" href="#">
+              <a class="page-footer__control-link page-footer__control-link--compare" href="#" aria-label="Перейти к сравнению товаров">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="white" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.91675 5.36667H4.66675V11.0833H2.91675V5.36667ZM6.18342 2.91667H7.81675V11.0833H6.18342V2.91667ZM9.45008 7.58334H11.0834V11.0833H9.45008V7.58334Z"/>
+                  <path
+                    d="M2.91675 5.36667H4.66675V11.0833H2.91675V5.36667ZM6.18342 2.91667H7.81675V11.0833H6.18342V2.91667ZM9.45008 7.58334H11.0834V11.0833H9.45008V7.58334Z"/>
                 </svg>
                 Сравнить
               </a>
             </li>
             <li class="page-footer__control page-footer__control--cart">
-              <a class="page-footer__control-link page-footer__control-link--cart" href="#">
+              <a class="page-footer__control-link page-footer__control-link--cart" href="#" aria-label="Перейти к корзине товаров">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="white" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.86215 2.5217C9.79278 2.43991 9.69341 2.39316 9.58927 2.39316H7.65774V3.4188C7.65774 3.89008 7.25359 4.2735 6.75684 4.2735C6.26008 4.2735 5.85593 3.89008 5.85593 3.4188V2.39316H4.05413V3.4188C4.05413 3.89008 3.64999 4.2735 3.15323 4.2735C2.65648 4.2735 2.25233 3.89008 2.25233 3.4188V2.39316H0.32089C0.216656 2.39316 0.117286 2.43991 0.0479169 2.5217C-0.0215425 2.6035 -0.0544254 2.71256 -0.0425335 2.82145L0.605665 8.78461C0.617737 9.45692 1.14179 9.99999 1.78431 9.99999H8.12584C8.76828 9.99999 9.29233 9.45692 9.30449 8.78452L9.95269 2.82136C9.96449 2.71256 9.93161 2.6035 9.86215 2.5217Z"/>
                     <path d="M3.15333 3.76068C3.35207 3.76068 3.51369 3.60735 3.51369 3.4188V1.53846C3.51369 1.01051 4.07486 0.683761 4.59477 0.683761H5.49567C6.04288 0.683761 6.39657 1.01923 6.39657 1.53846V3.4188C6.39657 3.60735 6.55829 3.76068 6.75693 3.76068C6.95558 3.76068 7.11729 3.60735 7.11729 3.4188V1.53846C7.11729 0.647009 6.43531 0 5.49567 0H4.59477C3.60126 0 2.79297 0.690171 2.79297 1.53846V3.4188C2.79297 3.60735 2.95459 3.76068 3.15333 3.76068Z"/>
@@ -444,13 +444,14 @@
               </a>
             </li>
           </ul>
-          <a href="tel:+7 (495) 495-95-95" class="page-footer__tel">Тел.: +7 (495) 495-95-95</a>
-          <a href="#" class="page-footer__htmlacademy-link">
-            <img class="page-footer__htmlacademy-logo" src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy">
+          <a href="tel:+7 (495) 495-95-95" class="page-footer__tel" aria-label="Позвонить">Тел.: +7 (495) 495-95-95</a>
+          <a href="#" class="page-footer__htmlacademy-link" aria-label="Перейти к HTML Academy">
+            <img class="page-footer__htmlacademy-logo" src="img/logo-htmlacademy.svg" alt="">
           </a>
         </div>
       </div>
     </footer>
+
     <script>
       const catalogMenu = document.querySelector(`.catalog-menu`);
       const catalogMenuRollupBtn = document.querySelector(`.page-header__catalog-rollup-btn`);
