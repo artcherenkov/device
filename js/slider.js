@@ -1,36 +1,59 @@
-const ACTIVE_SLIDE_CLASS = `slide--active`;
-const ACTIVE_CONTROL_CLASS = `page-main__slider-toggle--active`;
+(function () {
+  /**
+   * Инициализирует слайдер
+   *
+   * @param {string} activeSlideClass
+   * @param {string} activeControlClass
+   * @param {Node} slider - контейнер, содержащий контролы слайдера и сами слайды
+   * @param {NodeList} controls - список DOM-элементов контролов
+   * @param {NodeList} slides - список DOM-элементов слайдов
+   * @param {boolean} isServices - указывает на тип слайдера
+   */
+  window.initSlider = (activeSlideClass, activeControlClass, slider, controls, slides, isServices = false) => {
+    const changeActiveControl = (from, to) => {
+      isServices
+        ? from.parentNode.classList.remove(activeControlClass)
+        : from.classList.remove(activeControlClass);
+      from = to;
+      isServices
+        ? from.parentNode.classList.add(activeControlClass)
+        : from.classList.add(activeControlClass);
 
-const slider = document.querySelector(`.page-main__slider`);
-const controls = slider.querySelectorAll(`.page-main__slider-toggle`);
-const slides = slider.querySelectorAll(`.slide`);
-
-let activeSlideToggle = controls[0];
-let activeSlide = slides[0];
-
-const handleControlClick = (evt) => {
-  activeSlideToggle.classList.remove(ACTIVE_CONTROL_CLASS);
-  activeSlideToggle = evt.target;
-
-  activeSlideToggle.classList.add(ACTIVE_CONTROL_CLASS);
-  activeSlide.classList.remove(ACTIVE_SLIDE_CLASS);
-
-  controlToSlides.map((value) => {
-    if (activeSlideToggle === value.control) {
-      activeSlide = value.slide;
-      activeSlide.classList.add(ACTIVE_SLIDE_CLASS);
+      return from;
     }
-  })
-}
+    const changeActiveSlide = (from, to) => {
+      from.classList.remove(activeSlideClass);
+      from = to;
+      from.classList.add(activeSlideClass);
 
-let controlToSlides = [];
-for (let i = 0; i < controls.length; i++) {
-  controlToSlides.push({
-    control: controls[i],
-    slide: slides[i]
-  });
-}
+      return from;
+    }
 
-for (let control of controls) {
-  control.addEventListener(`click`, handleControlClick)
-}
+    let activeSlideToggle = controls[0];
+    let activeSlide = slides[0];
+
+    const handleControlClick = (evt) => {
+      evt.preventDefault();
+
+      activeSlideToggle = changeActiveControl(activeSlideToggle, evt.target);
+
+      controlToSlides.map((value) => {
+        if (activeSlideToggle === value.control) {
+          activeSlide = changeActiveSlide(activeSlide, value.slide);
+        }
+      });
+    }
+
+    let controlToSlides = [];
+    for (let i = 0; i < controls.length; i++) {
+      controlToSlides.push({
+        control: controls[i],
+        slide: slides[i]
+      });
+    }
+
+    for (let control of controls) {
+      control.addEventListener(`click`, handleControlClick, true)
+    }
+  }
+})();
