@@ -48,15 +48,15 @@
             </div>
           </li>
           <li class="page-header__control page-header__control--double">
-            <a class="page-header__delivery-link" href="#" aria-label="Перейти на страницу с информацией о доставке">
+            <a class="page-header__catalog-control page-header__delivery-link" href="#" aria-label="Перейти на страницу с информацией о доставке">
               Доставка
             </a>
-            <a class="page-header__warranty-link" href="#" aria-label="Перейти на страницу с информацией о гарантии">
+            <a class="page-header__catalog-control page-header__warranty-link" href="#" aria-label="Перейти на страницу с информацией о гарантии">
               Гарантия
             </a>
           </li>
           <li class="page-header__control">
-            <a class="page-header__contacts-link" href="#" aria-label="Перейти на страницу с информацией о контактах">
+            <a class="page-header__catalog-control page-header__contacts-link" href="#" aria-label="Перейти на страницу с информацией о контактах">
               Контакты
             </a>
           </li>
@@ -189,7 +189,7 @@
                   </li>
                 </ul>
                 <div class="page-main__sort-direction">
-                  <button class="page-main__sort-control page-main__sort-control--asc"
+                  <button class="page-main__sort-control page-main__sort-control--asc page-main__sort-control--active"
                           aria-label="Сортировать по возрастанию">
                     <img src="img/icon-down-dir.svg" width="18" height="18" alt="">
                   </button>
@@ -398,6 +398,14 @@
         </div>
       </div>
     </footer>
+    <script>
+      // const sortControls = document.querySelectorAll(`.page-main__sort-control`);
+      // for (let control of sortControls) {
+      //   control.addEventListener(`mouseover`, () => {
+      //     control.classList.remove(`page-main__sort-control--active`);
+      //   })
+      // }
+    </script>
     <script>
       const catalogMenu = document.querySelector(`.catalog-menu`);
       const catalogMenuRollupBtn = document.querySelector(`.page-header__catalog-rollup-btn`);

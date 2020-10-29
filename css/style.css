@@ -118,9 +118,19 @@ input[type="checkbox"].visually-hidden {
   font-size: 15px;
   font-weight: 300;
   line-height: 20px;
-  color: rgba(0, 0, 0, 0.3);
+  color: black;
   position: relative;
   display: flex;
+
+  opacity: 0.3;
+}
+
+#page-header__search:hover {
+  opacity: 0.6;
+}
+
+#page-header__search:focus {
+  opacity: 1;
 }
 
 .page-header__search-label {
@@ -131,6 +141,14 @@ input[type="checkbox"].visually-hidden {
 .page-header__control-link {
   display: flex;
   align-items: center;
+}
+
+.page-header__control-link:hover {
+  opacity: 0.6;
+}
+
+.page-header__control-link:active {
+  opacity: 0.3;
 }
 
 .page-header__control-link--login {
@@ -180,11 +198,23 @@ input[type="checkbox"].visually-hidden {
   margin-top: -6px;
 }
 
+.page-header__catalog-control:hover {
+  opacity: 0.6;
+}
+
+.page-header__catalog-control:active {
+  opacity: 0.3;
+}
+
 .page-header__catalog-rollup-btn {
   padding: 0;
   margin: -2px 0 0 15px;
   background: transparent;
   border: none;
+}
+
+.page-header__catalog-rollup-btn:hover {
+  cursor: pointer;
 }
 
 .page-header__delivery-link {
@@ -240,6 +270,14 @@ input[type="checkbox"].visually-hidden {
   line-height: 20px;
   color: black;
   text-decoration: none;
+}
+
+.catalog-menu__link:hover {
+  opacity: 0.6;
+}
+
+.catalog-menu__link:active {
+  opacity: 0.3;
 }
 
 /*
@@ -338,11 +376,9 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 60px;
 }
 
-.slide-more-btn {
-  color: black;
-  display: flex;
-  position: relative;
+.slide-more-btn.yellow-line-through {
   margin-bottom: 28px;
+
   justify-content: center;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -351,10 +387,16 @@ input[type="checkbox"].visually-hidden {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  height: 1em;
+  color: black;
+
   width: 220px;
   text-align: center;
   margin-left: 2px;
+  background-image: url("../img/line-through-light.svg");
+}
+
+.slide-more-btn.yellow-line-through:hover {
+  background-color: #f7e296;
 }
 
 .slide-controls {
@@ -396,22 +438,6 @@ input[type="checkbox"].visually-hidden {
   height: 4px;
   border-radius: 50%;
   border: 1px solid black;
-}
-
-.slide-more-btn::after {
-  content: "";
-  width: 100%;
-  height: 8px;
-  position: absolute;
-  background-color: #f0c52e;
-  top: 7px;
-  left: -2px;
-}
-
-.slide-more-btn span {
-  margin: 0 auto;
-  position: absolute;
-  z-index: 20;
 }
 
 .slide-features {
@@ -468,6 +494,15 @@ input[type="checkbox"].visually-hidden {
   grid-column-gap: 40px;
 }
 
+.page-main__popular-item-wrapper:hover .page-main__popular-picture {
+  background-color: #f0c52e;
+}
+
+.page-main__popular-item-wrapper:active h3,
+.page-main__popular-item-wrapper:active img {
+  opacity: 0.3;
+}
+
 .page-main__popular-item {
   width: 160px;
 }
@@ -495,8 +530,7 @@ input[type="checkbox"].visually-hidden {
   line-height: 22px;
   letter-spacing: 0.05em;
   color: black;
-  margin: 0;
-  margin-top: 38px;
+  margin: 38px 0 0;
 }
 
 .page-main__popular-item--band h3 {
@@ -517,7 +551,6 @@ input[type="checkbox"].visually-hidden {
   max-width: 1160px;
   display: grid;
   grid-template-columns: auto 1fr;
-
 }
 
 .page-main__services-list {
@@ -564,9 +597,6 @@ input[type="checkbox"].visually-hidden {
   text-decoration: none;
   color: black;
   display: inline-block;
-  background-image: url("../img/line-through.svg");
-  background-position: 0 7px;
-  background-repeat: repeat-x;
 }
 
 .page-main__services-item--active {
@@ -575,6 +605,10 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__services-item--active a {
   color: #f7e296;
+  background: transparent;
+}
+
+.page-main__services-item--active > .yellow-line-through:hover {
   background: transparent;
 }
 
@@ -681,9 +715,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__about h2,
 .page-main__contact h2 {
-  margin: 50px 0;
-  margin-top: 53px;
-  margin-bottom: 40px;
+  margin: 53px 0 40px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
@@ -730,10 +762,9 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__about-more,
 .page-main__contact-more {
-  display: block;
-  color: black;
   text-decoration: none;
-  margin-bottom: 90px;
+  margin-bottom: 77px;
+  margin-left: 2px;
 
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -742,31 +773,10 @@ input[type="checkbox"].visually-hidden {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 
-  position: relative;
-  height: 1em;
-  width: 260px;
-  /*margin-bottom: 2px;*/
-}
-
-.page-main__about-more span,
-.page-main__contact-more span {
-  position: absolute;
   width: 260px;
   text-align: center;
-  text-decoration: none;
   color: black;
-}
-
-.page-main__about-more span::after,
-.page-main__contact-more span::after {
-  content: "";
-  width: 100%;
-  height: 8px;
-  position: absolute;
-  background: #f0c52e;
-  top: 7px;
-  left: 0;
-  z-index: -1;
+  display: inline-block;
 }
 
 .page-main__contact-map {
@@ -990,6 +1000,14 @@ input[type="checkbox"].visually-hidden {
   color: #000000;
   opacity: 0.3;
   text-decoration: none;
+}
+
+.page-main__breadcrumbs-list a:hover {
+  opacity: 0.6;
+}
+
+.page-main__breadcrumbs-list a:active {
+  opacity: 0.1;
 }
 
 /*
@@ -1236,9 +1254,7 @@ input[type="checkbox"].visually-hidden {
 .filter__submit {
   display: block;
   border: none;
-  background: transparent;
-  position: relative;
-  height: 1em;
+  background-color: transparent;
   width: 200px;
 
   font-family: "Gilroy", "Arial", sans-serif;
@@ -1247,24 +1263,6 @@ input[type="checkbox"].visually-hidden {
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-}
-
-.filter__submit span {
-  top: 0;
-  left: -3px;
-  position: absolute;
-  width: 100%;
-}
-
-.filter__submit span::after {
-  content: "";
-  width: 100%;
-  height: 8px;
-  position: absolute;
-  background: #f0c52e;
-  top: 7px;
-  left: 3px;
-  z-index: -1;
 }
 
 .filter__submit:hover {
@@ -1349,6 +1347,14 @@ input[type="checkbox"].visually-hidden {
   text-decoration: none;
 }
 
+.page-main__sort-option-link:hover {
+  opacity: 0.6;
+}
+
+.page-main__sort-option-link:active {
+  opacity: 1;
+}
+
 .page-main__sort-option-link--active {
   opacity: 1;
 }
@@ -1363,6 +1369,15 @@ input[type="checkbox"].visually-hidden {
   padding: 0;
   background: transparent;
   border: none;
+  opacity: 0.2;
+}
+
+.page-main__sort-direction:hover .page-main__sort-control {
+  opacity: 0.4;
+}
+
+.page-main__sort-direction:hover .page-main__sort-control:active {
+  opacity: 1;
 }
 
 .page-main__sort-control--asc {
@@ -1373,6 +1388,10 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__sort-control--desc {
   margin-top: 4px;
+}
+
+.page-main__sort-control--active {
+  opacity: 1;
 }
 
 .page-main__products {
@@ -1441,15 +1460,14 @@ input[type="checkbox"].visually-hidden {
   z-index: 10;
 }
 
-.page-main__product-to-cart {
+.page-main__product-to-cart.yellow-line-through {
   display: block;
   border: none;
-  background: transparent;
-  position: relative;
-  height: 1em;
   width: 200px;
   text-align: center;
   margin: 179px auto 26px;
+  text-decoration: none;
+  color: black;
 
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -1457,25 +1475,6 @@ input[type="checkbox"].visually-hidden {
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-}
-
-.page-main__product-to-cart span {
-  top: 0;
-  left: -2px;
-  position: absolute;
-  width: 100%;
-  color: black;
-}
-
-.page-main__product-to-cart span::after {
-  content: "";
-  width: 100%;
-  height: 8px;
-  position: absolute;
-  background: #f0c52e;
-  top: 7px;
-  left: -1px;
-  z-index: -1;
 }
 
 .page-main__product-to-compare {
@@ -1654,7 +1653,8 @@ textarea {
 
 .popup__input-wrapper input::placeholder,
 textarea::placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: black;
+  opacity: 0.4;
 }
 
 .popup__input-wrapper--double {
@@ -1703,4 +1703,22 @@ textarea::placeholder {
   top: 7px;
   left: 0;
   z-index: -1;
+}
+
+.yellow-line-through {
+  margin-top: -9px;
+  margin-left: 0;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  background-image: url("../img/line-through.svg");
+  background-position: 0 16px;
+  background-repeat: repeat-x;
+}
+
+.yellow-line-through:hover {
+  background: #f0c52e;
+}
+
+.yellow-line-through:active {
+  color: rgba(0, 0, 0, 0.3);
 }
