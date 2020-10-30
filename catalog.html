@@ -14,17 +14,23 @@
           <img class="page-header__logo" src="img/logo.svg" width="165" height="35" alt="Логотип Device">
         </a>
         <ul class="page-header__controls-list">
-          <li class="page-header__control">
+          <li class="page-header__control page-header__control--search">
             <label class="page-header__search-label" for="page-header__search">
               <img src="img/icon-search.svg" aria-hidden="true" alt="">
-              <input type="text" id="page-header__search" name="search" placeholder="Поиск по сайту">
             </label>
+            <input type="text" class="page-header__search-input" id="page-header__search" name="search" placeholder="Поиск по сайту">
+            <div class="page-header__search-btn-wrapper">
+              <button class="page-header__search-btn">Найти</button>
+              <span class="page-header__search-btn-line"></span>
+            </div>
           </li>
           <li class="page-header__control page-header__control--logged-in">
             <div class="page-header__user-wrapper">
-              <img src="img/icon-user.svg" aria-hidden="true" alt="">
-              <p class="page-header__user">Валентин Петухов</p>
-              <a href="#" aria-label="Выйти из аккаунта">Выйти</a>
+              <a href="#" class="page-header__user">
+                <img src="img/icon-user.svg" aria-hidden="true" alt="">
+                Валентин Петухов
+              </a>
+              <a href="#" class="page-header__log-out" aria-label="Выйти из аккаунта">Выйти</a>
             </div>
           </li>
           <li class="page-header__control page-header__control--double">
@@ -147,7 +153,7 @@
                       <label class="filter__checkbox-label" for="cb-red">Красный</label>
                     </li>
                     <li class="filter__checkboxes-item">
-                      <input class="filter__checkbox visually-hidden" type="checkbox" id="cb-pink" name="pink">
+                      <input class="filter__checkbox visually-hidden" type="checkbox" id="cb-pink" name="pink" checked disabled>
                       <label class="filter__checkbox-label" for="cb-pink">Розовый</label>
                     </li>
                   </ul>
@@ -278,25 +284,25 @@
                 </div>
               </li>
             </ul>
-            <div class="page-main__products-pagination">
-              <div class="page-main__products-pagination-wrapper">
-                <p class="page-main__products-pagination-back">
-                  <a href="#" aria-label="Перейти на предыдущую страницу">Назад</a>
-                </p>
-                <ul class="page-main__products-page-nums">
-                  <li class="page-main__products-page-num page-main__products-page-num--active">
+            <div class="page-main__products-pagination pagination">
+              <div class="pagination-wrapper">
+                <a class="pagination__direction pagination__direction--back" href="#" aria-label="Перейти на предыдущую страницу">
+                  <span>Назад</span>
+                </a>
+                <ul class="pagination__nums">
+                  <li class="pagination__num pagination__num--active">
                     <a href="#" aria-label="Перейти на первую страницу">1</a>
                   </li>
-                  <li class="page-main__products-page-num">
+                  <li class="pagination__num">
                     <a href="#" aria-label="Перейти на вторую страницу">2</a>
                   </li>
-                  <li class="page-main__products-page-num">
+                  <li class="pagination__num">
                     <a href="#" aria-label="Перейти на третью страницу">3</a>
                   </li>
                 </ul>
-                <p class="page-main__products-pagination-forward">
-                  <a href="#" aria-label="Перейти на следующую страницу">Вперед</a>
-                </p>
+                <a class="pagination__direction pagination__direction--forward" href="#" aria-label="Перейти на следующую страницу">
+                  <span>Вперед</span>
+                </a>
               </div>
             </div>
           </section>
@@ -308,8 +314,8 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__left-side">
-          <a href="#" class="page-footer__logo-link">
-            <p class="page-footer__logo">
+          <p class="page-footer__logo">
+            <a href="#" class="page-footer__logo-link">
               <span class="visually-hidden">Логотип Device</span>
               <svg width="163" height="35" viewBox="0 0 163 35" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0)" fill="#F0C52E">
@@ -322,20 +328,20 @@
                   </clipPath>
                 </defs>
               </svg>
-            </p>
-          </a>
+            </a>
+          </p>
           <address>г. Москва, ул. Строителей, 15</address>
         </div>
         <div class="page-footer__middle">
           <ul class="page-footer__shop-controls-list">
             <li class="page-footer__control">
-              <a href="#" aria-label="Перейти на страницу с информацией о доставке">Доставка</a>
+              <a class="page-footer__control-link page-footer__control-link--middle" href="#" aria-label="Перейти на страницу с информацией о доставке">Доставка</a>
             </li>
             <li class="page-footer__control">
-              <a href="#" aria-label="Перейти на страницу с информацией о гарантии">Гарантия</a>
+              <a class="page-footer__control-link page-footer__control-link--middle" href="#" aria-label="Перейти на страницу с информацией о гарантии">Гарантия</a>
             </li>
             <li class="page-footer__control">
-              <a href="#" aria-label="Перейти на страницу с информацией о контактах">Контакты</a>
+              <a class="page-footer__control-link page-footer__control-link--middle" href="#" aria-label="Перейти на страницу с информацией о контактах">Контакты</a>
             </li>
           </ul>
           <ul class="page-footer__social-list">
@@ -360,13 +366,15 @@
           <ul class="page-footer__controls-list">
             <li class="page-footer__control page-footer__control--login page-footer__control--logged-in">
               <div class="page-footer__user-wrapper">
-                <a href="#" aria-label="Выйти из аккаунта">Выйти</a>
+                <a class="page-footer__control-link" href="#" aria-label="Выйти из аккаунта">
+                  <span>Выйти</span>
+                </a>
                 <p class="page-footer__user">
                   <svg width="13" height="14" viewBox="0 0 13 14" fill="#f7e296" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z"/>
                   </svg>
-                  Валентин Петухов
+                  <a href="#">Валентин Петухов</a>
                 </p>
               </div>
             </li>
@@ -376,7 +384,7 @@
                   <path
                     d="M2.91675 5.36667H4.66675V11.0833H2.91675V5.36667ZM6.18342 2.91667H7.81675V11.0833H6.18342V2.91667ZM9.45008 7.58334H11.0834V11.0833H9.45008V7.58334Z"/>
                 </svg>
-                Сравнить
+                <span>Сравнить</span>
               </a>
             </li>
             <li class="page-footer__control page-footer__control--cart">
@@ -387,7 +395,7 @@
                   <path
                     d="M3.15333 3.76068C3.35207 3.76068 3.51369 3.60735 3.51369 3.4188V1.53846C3.51369 1.01051 4.07486 0.683761 4.59477 0.683761H5.49567C6.04288 0.683761 6.39657 1.01923 6.39657 1.53846V3.4188C6.39657 3.60735 6.55829 3.76068 6.75693 3.76068C6.95558 3.76068 7.11729 3.60735 7.11729 3.4188V1.53846C7.11729 0.647009 6.43531 0 5.49567 0H4.59477C3.60126 0 2.79297 0.690171 2.79297 1.53846V3.4188C2.79297 3.60735 2.95459 3.76068 3.15333 3.76068Z"/>
                 </svg>
-                Корзина
+                <span>Корзина</span>
               </a>
             </li>
           </ul>
@@ -398,6 +406,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/check-header-input.js"></script>
     <script src="js/catalog-list-toggle.js"></script>
   </body>
 </html>
