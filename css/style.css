@@ -1565,12 +1565,11 @@ input[type="checkbox"].visually-hidden {
 }
 
 .popup {
-  display: none;
   width: 960px;
   background-color: white;
   z-index: 20;
   position: fixed;
-  top: 0;
+  top: -100%;
   left: calc(50% - 960px / 2);
   margin: auto;
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.15);
@@ -1579,7 +1578,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .popup--opened {
-  display: block;
+  z-index: 1;
+  top: 0;
   opacity: 1;
   transition: 0.5s ease;
 }
@@ -1624,6 +1624,19 @@ input[type="checkbox"].visually-hidden {
 .popup__input-wrapper {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.popup__error-message {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ff8383;
+  padding: 5px;
+  position: absolute;
+  bottom: -30px;
 }
 
 .popup__input-wrapper label {
@@ -1634,7 +1647,7 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 10px;
 }
 
-.popup__input-wrapper input,
+.popup__input,
 textarea {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
@@ -1644,6 +1657,10 @@ textarea {
   background: #f2f2f2;
   border: none;
   padding: 16px 0 16px 20px;
+}
+
+.popup__input--error {
+  background-color: #f6dada;
 }
 
 textarea {
