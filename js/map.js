@@ -18,7 +18,6 @@
 
   const handleEscKeydown = (evt) => {
     if (evt.keyCode === 27) {
-      console.log(`клик`);
       if (mapPopup.classList.contains(OPEN_POPUP_CLASS)) {
         evt.preventDefault();
         mapPopup.classList.remove(OPEN_POPUP_CLASS);
