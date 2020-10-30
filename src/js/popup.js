@@ -97,6 +97,7 @@
 
   popupForm.addEventListener(`submit`, handleFormSubmit);
   for (let input of popupInputs) {
+    input.required = false;
     input.addEventListener(`input`, handleInput(input));
   }
   openPopupBtn.addEventListener(`click`, handleOpenPopupBtnClick);
