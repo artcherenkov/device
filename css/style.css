@@ -806,6 +806,11 @@ input[type="checkbox"].visually-hidden {
   margin: 0 0 40px;
 }
 
+.page-main__contact-map-btn {
+  display: block;
+  margin-bottom: 81px;
+}
+
 .page-main__about p:nth-of-type(2) {
   margin-bottom: 63px;
 }
@@ -851,10 +856,6 @@ input[type="checkbox"].visually-hidden {
   text-align: center;
   color: black;
   display: inline-block;
-}
-
-.page-main__contact-map {
-  margin-bottom: 81px;
 }
 
 /*
@@ -1874,6 +1875,26 @@ textarea::placeholder {
 .popup__input-wrapper--double {
   grid-column: 1 / span 2;
   margin-bottom: 24px;
+}
+
+.map.popup--opened {
+  top: 20%;
+}
+
+.map .popup__close-btn {
+  top: -55px;
+  right: -60px;
+}
+
+.map__iframe-wrapper {
+  margin: 0 0 0;
+}
+
+.map__iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  margin-bottom: -5px;
 }
 
 .yellow-line-through {

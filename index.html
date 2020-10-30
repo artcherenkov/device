@@ -330,7 +330,9 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки.
             Всякое бывает.</p>
-          <img class="page-main__contact-map" src="https://via.placeholder.com/560x222" alt="Логотип Device">
+          <a class="page-main__contact-map-btn" href="#">
+            <img class="page-main__contact-map-img" src="img/bg-map.png" width="560" height="222" alt="Логотип Device">
+          </a>
           <a href="#" class="page-main__contact-more yellow-line-through">
             Напишите нам
           </a>
@@ -456,11 +458,19 @@
       </form>
     </section>
 
+    <section class="map popup">
+      <button class="popup__close-btn"></button>
+      <div class="map__iframe-wrapper">
+        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A97be330a3245ec8f07f34ac59179f27212b81c7f8bf945f1c1531d68351b5822&amp;source=constructor"></iframe>
+      </div>
+    </section>
+
     <script src="js/check-header-input.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/promo-slider.js"></script>
     <script src="js/services-slider.js"></script>
     <script src="js/catalog-list-toggle.js"></script>
     <script src="js/popup.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 (function () {
   const OPEN_POPUP_CLASS = `popup--opened`;
-  const INPUR_ERROR_CLASS = `popup__input--error`;
+  const INPUT_ERROR_CLASS = `popup__input--error`;
 
   const openPopupBtn = document.querySelector(`.page-main__contact-more`);
   const popup = document.querySelector(`.popup`);
@@ -32,7 +32,7 @@
 
   const resetDomError = (error, input) => {
     error.remove();
-    input.classList.remove(INPUR_ERROR_CLASS);
+    input.classList.remove(INPUT_ERROR_CLASS);
   }
 
   const setError = (input) => {
@@ -42,7 +42,7 @@
       error
     });
     input.parentNode.appendChild(error);
-    input.classList.add(INPUR_ERROR_CLASS);
+    input.classList.add(INPUT_ERROR_CLASS);
   }
 
   const handleOpenPopupBtnClick = (evt) => {
@@ -50,6 +50,7 @@
     popupForm.reset();
     popup.classList.add(OPEN_POPUP_CLASS);
     closePopupBtn.addEventListener(`click`, handleClosePopupBtnClick);
+    window.addEventListener("keydown", handleEscKeydown);
   }
 
   const handleClosePopupBtnClick = () => {
@@ -59,7 +60,7 @@
   }
 
   const handleEscKeydown = (evt) => {
-    if (evt.key === 27) {
+    if (evt.keyCode === 27) {
       if (popup.classList.contains(OPEN_POPUP_CLASS)) {
         evt.preventDefault();
         popup.classList.remove(OPEN_POPUP_CLASS);
@@ -87,7 +88,7 @@
   const handleInput = (input) => {
     return () => {
       clearErrors({input});
-      input.classList.remove(INPUR_ERROR_CLASS);
+      input.classList.remove(INPUT_ERROR_CLASS);
       if (!input.value) {
         setError(input);
       }
@@ -99,6 +100,4 @@
     input.addEventListener(`input`, handleInput(input));
   }
   openPopupBtn.addEventListener(`click`, handleOpenPopupBtnClick);
-  window.addEventListener("keydown", handleEscKeydown);
-
 })();
