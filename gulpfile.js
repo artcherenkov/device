@@ -53,13 +53,22 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 })
 
-gulp.task("js", function () {
+gulp.task("index-js", function () {
   return gulp.src('src/js/*.js')
-    .pipe(concatJs('bundle.js'))
-    .pipe(gulp.dest('build/'))
+    .pipe(concatJs('index.js'))
+    .pipe(gulp.dest('build/js'))
     .pipe(terser())
-    .pipe(rename("bundle.min.js"))
-    .pipe(gulp.dest('build/'));
+    .pipe(rename("index.min.js"))
+    .pipe(gulp.dest('build/js'));
+})
+
+gulp.task("catalog-js", function () {
+  return gulp.src(['src/js/check-header-input.js', 'src/js/catalog-list-toggle.js'])
+    .pipe(concatJs('catalog.js'))
+    .pipe(gulp.dest('build/js'))
+    .pipe(terser())
+    .pipe(rename("catalog.min.js"))
+    .pipe(gulp.dest('build/js'));
 })
 
 gulp.task("server", function () {
@@ -85,7 +94,8 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "html",
-  "js"
+  "index-js",
+  "catalog-js"
 ));
 
 gulp.task("start", gulp.series("build", "server"));
