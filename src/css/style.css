@@ -13,6 +13,10 @@ input[type="checkbox"].visually-hidden {
   overflow: hidden;
 }
 
+.page-body {
+  min-width: 1160px;
+}
+
 .page-main {
   position: relative;
 }
@@ -556,7 +560,6 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__popular {
   width: 1160px;
-  padding: 0 40px;
   margin: 80px auto 0;
 }
 
@@ -980,6 +983,14 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-footer__control-link:active span {
+  opacity: 0.3;
+}
+
+.page-footer__control-link:hover svg {
+  opacity: 0.6;
+}
+
+.page-footer__control-link:active svg {
   opacity: 0.3;
 }
 
@@ -1413,10 +1424,10 @@ input[type="checkbox"].visually-hidden {
 */
 
 .page-main__container {
-  width: 1240px;
+  width: 1160px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 368px auto;
+  grid-template-columns: 328px auto;
   grid-column-gap: 0;
   position: relative;
 }
@@ -1538,11 +1549,6 @@ input[type="checkbox"].visually-hidden {
   grid-template-rows: min-content 1fr min-content;
   grid-row-gap: 25px;
   margin-left: 72px;
-  margin-right: 40px;
-}
-
-.page-main__product:hover {
-  cursor: pointer;
 }
 
 .page-main__product:hover img {
@@ -1648,7 +1654,7 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 15px;
 }
 
-.page-main__product-description {
+.page-main__product-name {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -1656,6 +1662,11 @@ input[type="checkbox"].visually-hidden {
   letter-spacing: 0.05em;
   margin: 0;
   margin-left: 1px;
+}
+
+.page-main__product-name a {
+  text-decoration: none;
+  color: black;
 }
 
 .page-main__product-price {
