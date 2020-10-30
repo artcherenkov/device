@@ -1,3 +1,11 @@
+:root {
+  --open-sans: "Open Sans", "Arial", sans-serif;
+  --gilroy: "Gilroy", "Arial", sans-serif;
+  --special-yellow-dark: #f0c52e;
+  --special-yellow: #f7e296;
+  --special-green: #91c92f;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="radio"].visually-hidden,
 input[type="checkbox"].visually-hidden {
@@ -41,7 +49,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-header {
   max-width: 1160px;
-  background-color: #f7e296;
+  background-color: var(--special-yellow);
   margin: 40px auto 0;
 
   position: relative;
@@ -89,7 +97,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-header__control a,
 .page-header__user {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -133,7 +141,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-header__shop-controls-list a {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -144,7 +152,7 @@ input[type="checkbox"].visually-hidden {
 .page-header__search-input {
   margin-left: 20px;
   width: 300px;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   background-color: transparent;
   border: none;
   font-size: 15px;
@@ -174,7 +182,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-header__search-btn {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -313,7 +321,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-header__catalog-menu {
   width: 100%;
-  background: #f7e296;
+  background: var(--special-yellow);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -342,7 +350,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .catalog-menu__link {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -423,7 +431,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .slide__number {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 900;
   font-size: 179px;
   position: absolute;
@@ -437,7 +445,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .slide-header h2 {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
@@ -446,7 +454,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .slide-description {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -459,7 +467,7 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 28px;
 
   justify-content: center;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -475,7 +483,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .slide-more-btn.yellow-line-through:hover {
-  background-color: #f7e296;
+  background-color: var(--special-yellow);
 }
 
 .slide-controls {
@@ -529,7 +537,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .slide-feature {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   display: flex;
   flex-direction: column;
 }
@@ -573,7 +581,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__popular-item-wrapper:hover .page-main__popular-picture {
-  background-color: #f0c52e;
+  background-color: var(--special-yellow-dark);
 }
 
 .page-main__popular-item-wrapper:active h3,
@@ -602,7 +610,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__popular-item h3 {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -658,7 +666,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__services-item {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -682,7 +690,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__services-item--active a {
-  color: #f7e296;
+  color: var(--special-yellow);
   background: transparent;
 }
 
@@ -705,7 +713,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0;
   position: absolute;
   top: -30px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -713,7 +721,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__services-body p {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: 300;
   font-size: 15px;
   line-height: 28px;
@@ -794,7 +802,7 @@ input[type="checkbox"].visually-hidden {
 .page-main__about h2,
 .page-main__contact h2 {
   margin: 53px 0 40px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -803,7 +811,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__about p,
 .page-main__contact p {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: 300;
   font-size: 15px;
   line-height: 28px;
@@ -834,7 +842,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__about-delivery-item p {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 16px;
   padding-left: 17px;
@@ -849,7 +857,7 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 77px;
   margin-left: 2px;
 
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -897,7 +905,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-footer__left-side address,
 .page-footer__tel {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -959,7 +967,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-footer__shop-controls-list a {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1081,7 +1089,7 @@ input[type="checkbox"].visually-hidden {
 .page-footer__controls-list a,
 .page-footer__user {
   margin: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -1106,7 +1114,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__header {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -1144,7 +1152,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__breadcrumbs-list a {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: 300;
   font-size: 14px;
   line-height: 19px;
@@ -1176,7 +1184,7 @@ input[type="checkbox"].visually-hidden {
   min-height: 70px;
   line-height: 70px;
   margin: 0;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 16px;
   letter-spacing: 0.1em;
@@ -1194,7 +1202,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter__fieldset-header {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 14px;
   line-height: 17px;
@@ -1218,7 +1226,7 @@ input[type="checkbox"].visually-hidden {
 
 .filter__slider {
   position: relative;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
 }
 
 .filter__slider-line {
@@ -1252,7 +1260,7 @@ input[type="checkbox"].visually-hidden {
 .filter__slider-line::after {
   content: "";
   height: 2px;
-  background-color: #91c92f;
+  background-color: var(--special-green);
   width: 120px;
   position: absolute;
 }
@@ -1332,7 +1340,7 @@ input[type="checkbox"].visually-hidden {
 
 .filter__checkbox-label {
   display: flex;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: 300;
   font-size: 14px;
   line-height: 19px;
@@ -1374,7 +1382,7 @@ input[type="checkbox"].visually-hidden {
 
 .filter__radio-label {
   display: flex;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: 300;
   font-size: 14px;
   line-height: 19px;
@@ -1407,7 +1415,7 @@ input[type="checkbox"].visually-hidden {
   background-color: transparent;
   width: 200px;
 
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1465,7 +1473,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__sort-header {
   margin: 0;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -1489,7 +1497,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__sort-option-link {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-size: 14px;
   line-height: 19px;
   color: #000000;
@@ -1618,7 +1626,7 @@ input[type="checkbox"].visually-hidden {
   text-decoration: none;
   color: black;
 
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1628,7 +1636,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__product-to-compare {
   display: block;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: 300;
   font-size: 13px;
   line-height: 18px;
@@ -1655,7 +1663,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__product-name {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1670,7 +1678,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__product-price {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 300;
   font-size: 16px;
   line-height: 18px;
@@ -1732,7 +1740,7 @@ input[type="checkbox"].visually-hidden {
 
 .pagination a {
   display: block;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -1824,7 +1832,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .popup__error-message {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: normal;
   font-style: italic;
   font-size: 14px;
@@ -1836,7 +1844,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .popup__input-wrapper label {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: var(--gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1845,7 +1853,7 @@ input[type="checkbox"].visually-hidden {
 
 .popup__input,
 textarea {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: var(--open-sans);
   font-weight: normal;
   font-size: 14px;
   line-height: 19px;
@@ -1864,7 +1872,7 @@ textarea:hover {
 .popup__input:focus,
 textarea:focus {
   background-color: white;
-  border: 2px solid #f7e296;
+  border: 2px solid var(--special-yellow);
   outline: none;
 }
 
@@ -1924,11 +1932,11 @@ textarea::placeholder {
 }
 
 .yellow-line-through:hover {
-  background: #f0c52e;
+  background: var(--special-yellow-dark);
 }
 
 .yellow-line-through--light:hover {
-  background: #f7e296;
+  background: var(--special-yellow);
   cursor: pointer;
 }
 
