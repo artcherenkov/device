@@ -27,21 +27,21 @@ gulp.task("copy", function () {
     ], {
       base: "src"
     })
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("./"));
 })
 
 gulp.task("css", function () {
   return gulp.src("src/css/*.css")
     .pipe(concatCss("bundle.css"))
     .pipe(plumber())
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("./css"))
     .pipe(sourcemap.init())
     .pipe(postcss([autoprefixer()]))
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("./css"))
     .pipe(csso())
     .pipe(rename("bundle.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("./css"))
     .pipe(server.stream());
 });
 
@@ -50,30 +50,30 @@ gulp.task("html", function () {
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("./"));
 })
 
 gulp.task("index-js", function () {
   return gulp.src('src/js/*.js')
     .pipe(concatJs('index.js'))
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('./js'))
     .pipe(terser())
     .pipe(rename("index.min.js"))
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('./js'));
 })
 
 gulp.task("catalog-js", function () {
   return gulp.src(['src/js/check-header-input.js', 'src/js/catalog-list-toggle.js'])
     .pipe(concatJs('catalog.js'))
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('./js'))
     .pipe(terser())
     .pipe(rename("catalog.min.js"))
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('./js'));
 })
 
 gulp.task("server", function () {
   server.init({
-    server: "build/",
+    server: "./",
     notify: false,
     open: true,
     cors: true,
@@ -90,7 +90,7 @@ gulp.task("refresh", function (done) {
 })
 
 gulp.task("build", gulp.series(
-  "clean",
+  // "clean",
   "copy",
   "css",
   "html",
