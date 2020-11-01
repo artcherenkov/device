@@ -3,7 +3,7 @@
   font-family: "Gilroy";
   font-style: normal;
   font-display: swap;
-  src: url("fonts/gilroyextrabold.woff2") format("woff2"), url("fonts/gilroyextrabold.woff") format("woff");
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-family: "Gilroy";
   font-style: normal;
   font-display: swap;
-  src: url("fonts/gilroylight.woff2") format("woff2"), url("fonts/gilroylight.woff") format("woff");
+  src: url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-family: "Open Sans";
   font-style: normal;
   font-display: swap;
-  src: url("fonts/opensans.woff2") format("woff2"), url("fonts/opensans.woff") format("woff");
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-family: "Open Sans";
   font-style: normal;
   font-display: swap;
-  src: url("fonts/opensanslight.woff2") format("woff2"), url("fonts/opensanslight.woff") format("woff");
+  src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -919,7 +919,7 @@ input[type="checkbox"].visually-hidden {
   width: 220px;
   text-align: center;
   margin-left: 2px;
-  background-image: url("img/line-through-light.svg");
+  background-image: url("../img/line-through-light.svg");
 }
 
 .slide-more-btn.yellow-line-through:hover {
@@ -1146,7 +1146,7 @@ input[type="checkbox"].visually-hidden {
   text-align: center;
   text-decoration: none;
   color: black;
-  display: inline-block;
+  display: block;
 }
 
 .page-main__services-item--active {
@@ -1296,7 +1296,7 @@ input[type="checkbox"].visually-hidden {
 .page-main__about-delivery-list {
   margin: 0 0 84px;
   padding-left: 15px;
-  list-style-image: url("img/list-style.svg");
+  list-style-image: url("../img/list-style.svg");
 }
 
 .page-main__about-delivery-item:not(:last-child) {
@@ -1331,7 +1331,7 @@ input[type="checkbox"].visually-hidden {
   width: 260px;
   text-align: center;
   color: black;
-  display: inline-block;
+  display: block;
 }
 
 /*
@@ -1645,7 +1645,7 @@ input[type="checkbox"].visually-hidden {
   margin-left: 14px;
   width: 12px;
   height: 12px;
-  background: url("img/icon_arrow_nav.svg");
+  background: url("../img/icon_arrow_nav.svg");
 }
 
 .page-main__breadcrumbs-list a {
@@ -1869,7 +1869,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter__checkbox-label::before {
-  background: url("img/checkbox-off.svg") center no-repeat;
+  background: url("../img/checkbox-off.svg") center no-repeat;
   content: "";
   margin-right: 18px;
   width: 24px;
@@ -1877,7 +1877,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter__checkbox-label::after {
-  background: url("img/checkbox-on.svg") center no-repeat;
+  background: url("../img/checkbox-on.svg") center no-repeat;
   content: "";
   position: absolute;
   width: 24px;
@@ -1915,7 +1915,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter__radio-label::before {
-  background: url("img/radio-off.svg") center no-repeat;
+  background: url("../img/radio-off.svg") center no-repeat;
   content: "";
   margin-right: 16px;
   width: 24px;
@@ -1923,7 +1923,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter__radio-label::after {
-  background: url("img/radio-on.svg") center no-repeat;
+  background: url("../img/radio-on.svg") center no-repeat;
   content: "";
   position: absolute;
   width: 24px;
@@ -2128,7 +2128,7 @@ input[type="checkbox"].visually-hidden {
   content: "";
   width: 62px;
   height: 62px;
-  background: url("img/label-new.svg");
+  background: url("../img/label-new.svg");
   position: absolute;
   top: 29px;
   right: 27px;
@@ -2359,7 +2359,7 @@ input[type="checkbox"].visually-hidden {
 
 .popup__close-btn::after {
   content: '';
-  background: url("img/icon-cross.svg");
+  background: url("../img/icon-cross.svg");
   width: 30px;
   height: 30px;
 }
@@ -2500,13 +2500,13 @@ textarea::placeholder {
   margin-left: 0;
   padding-top: 9px;
   padding-bottom: 9px;
-  background-image: url("img/line-through.svg");
+  background-image: url("../img/line-through.svg");
   background-position: 0 16px;
   background-repeat: repeat-x;
 }
 
 .yellow-line-through--light {
-  background-image: url("img/line-through-light.svg");
+  background-image: url("../img/line-through-light.svg");
 }
 
 .yellow-line-through:hover {
