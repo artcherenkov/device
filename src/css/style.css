@@ -530,7 +530,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__slider-toggle--active::after {
-  content: '';
+  content: "";
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -1153,7 +1153,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__breadcrumbs-item:not(:last-child)::after {
-  content: '';
+  content: "";
   margin-bottom: -2px;
   margin-left: 14px;
   width: 12px;
@@ -1819,7 +1819,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .popup__close-btn::after {
-  content: '';
+  content: "";
   background: url("../img/icon-cross.svg");
   width: 30px;
   height: 30px;
