@@ -1176,7 +1176,7 @@ input[type="checkbox"].visually-hidden {
 .filter__wrapper {
   display: flex;
   flex-direction: column;
-  padding-left: 100px;
+  padding-left: 60px;
   padding-right: 68px;
 }
 
