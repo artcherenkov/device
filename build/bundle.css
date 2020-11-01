@@ -1146,7 +1146,7 @@ input[type="checkbox"].visually-hidden {
   text-align: center;
   text-decoration: none;
   color: black;
-  display: inline-block;
+  display: block;
 }
 
 .page-main__services-item--active {
@@ -1331,7 +1331,7 @@ input[type="checkbox"].visually-hidden {
   width: 260px;
   text-align: center;
   color: black;
-  display: inline-block;
+  display: block;
 }
 
 /*
