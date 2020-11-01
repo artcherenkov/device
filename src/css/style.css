@@ -334,14 +334,14 @@ input[type="checkbox"].visually-hidden {
   background: var(--special-yellow);
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: calc(100% - 144px);
   z-index: 1;
-  padding-bottom: 46px;
-  padding-top: 20px;
+  padding-bottom: 42px;
+  padding-top: 10px;
 }
 
 .catalog-menu--catalog {
-  bottom: initial;
+  top: initial;
 }
 
 .catalog-menu__list {
@@ -352,7 +352,7 @@ input[type="checkbox"].visually-hidden {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-column-gap: 61px;
-  grid-row-gap: 20px;
+  grid-row-gap: 16px;
 }
 
 .catalog-menu__item--grow2 {
