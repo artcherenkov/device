@@ -582,7 +582,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__popular-list {
-  margin: 0 0 124px;
+  margin: 0 0 84px;
+  margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
@@ -601,6 +602,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__popular-item {
   width: 160px;
+  margin-bottom: 40px;
 }
 
 .page-main__popular-item a {
@@ -639,7 +641,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-main__services {
   background-color: var(--basic-grey-light);
-  margin-top: 184px;
+  margin-top: 144px;
 }
 
 .page-main__services-wrapper {
