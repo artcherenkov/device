@@ -1776,7 +1776,7 @@ input[type="checkbox"].visually-hidden {
 .popup {
   width: 960px;
   background-color: white;
-  z-index: 20;
+  z-index: -20;
   position: fixed;
   top: -100%;
   left: calc(50% - 960px / 2);
