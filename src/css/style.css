@@ -1578,7 +1578,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__product:hover .page-main__product-controls {
-  display: block;
+  visibility: visible;
 }
 
 .page-main__products-list {
@@ -1622,7 +1622,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-main__product-controls {
-  display: none;
+  visibility: hidden;
   width: 100%;
   height: 100%;
   position: absolute;
