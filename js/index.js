@@ -91,7 +91,7 @@
     evt.preventDefault();
     mapPopup.classList.add(OPEN_POPUP_CLASS);
     closePopupBtn.addEventListener(`click`, handleClosePopupBtnClick);
-    window.addEventListener("keydown", handleEscKeydown);
+    window.addEventListener(`keydown`, handleEscKeydown);
   }
 
   const handleClosePopupBtnClick = () => {
@@ -163,7 +163,7 @@
     popupForm.reset();
     popup.classList.add(OPEN_POPUP_CLASS);
     closePopupBtn.addEventListener(`click`, handleClosePopupBtnClick);
-    window.addEventListener("keydown", handleEscKeydown);
+    window.addEventListener(`keydown`, handleEscKeydown);
   }
 
   const handleClosePopupBtnClick = () => {
@@ -214,6 +214,35 @@
     input.addEventListener(`input`, handleInput(input));
   }
   openPopupBtn.addEventListener(`click`, handleOpenPopupBtnClick);
+})();
+
+(function () {
+  const productControls = document.querySelectorAll(`.page-main__product-controls`);
+  const productImages = document.querySelectorAll(`.page-main__product-image`);
+
+  let visibility = false;
+
+  const setVisible = (evt) => {
+    if (evt.keyCode === 9) {
+      if (!visibility) {
+        Array.from(productControls).map((control) => control.style = `visibility: visible`);
+        Array.from(productImages).map((image) => image.style = `opacity: 0.7`);
+        console.log(`productImages`)
+      }
+      visibility = true;
+    }
+  }
+
+  const resetVisible = () => {
+    if (visibility) {
+      Array.from(productControls).map((control) => control.style = `visibility: hidden`);
+      Array.from(productImages).map((image) => image.style = `opacity: 1`);
+    }
+    visibility = false;
+  }
+
+  document.addEventListener(`keydown`, setVisible);
+  document.addEventListener(`mouseover`, resetVisible);
 })();
 
 (function () {

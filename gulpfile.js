@@ -63,7 +63,7 @@ gulp.task("index-js", function () {
 })
 
 gulp.task("catalog-js", function () {
-  return gulp.src(['src/js/check-header-input.js', 'src/js/catalog-list-toggle.js'])
+  return gulp.src(['src/js/check-header-input.js', 'src/js/catalog-list-toggle.js', 'src/js/product-controls-accessibility.js'])
     .pipe(concatJs('catalog.js'))
     .pipe(gulp.dest('./js'))
     .pipe(terser())
@@ -80,6 +80,7 @@ gulp.task("server", function () {
     ui: false
   });
 
+  gulp.watch("src/js/*.js", gulp.series("index-js"));
   gulp.watch("src/css/*.css", gulp.series("css"));
   gulp.watch("src/*.html", gulp.series("html", "refresh"));
 });

@@ -9,7 +9,7 @@
     evt.preventDefault();
     mapPopup.classList.add(OPEN_POPUP_CLASS);
     closePopupBtn.addEventListener(`click`, handleClosePopupBtnClick);
-    window.addEventListener("keydown", handleEscKeydown);
+    window.addEventListener(`keydown`, handleEscKeydown);
   }
 
   const handleClosePopupBtnClick = () => {
