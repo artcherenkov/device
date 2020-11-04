@@ -168,6 +168,7 @@
 
   const handleClosePopupBtnClick = () => {
     popup.classList.remove(OPEN_POPUP_CLASS);
+    popup.classList.remove(`popup--error`);
     popupForm.reset();
     clearErrors({fullRemove: true});
   }
@@ -183,7 +184,8 @@
   }
 
   const handleFormSubmit = (evt) => {
-    if (checkFormValidity()) {
+    const isValid = checkFormValidity();
+    if (isValid) {
       evt.preventDefault();
     }
   }
@@ -194,6 +196,9 @@
       if (!input.value) {
         setError(input);
       }
+    }
+    if (Boolean(errors.length)) {
+      popup.classList.add(`popup--error`);
     }
     return Boolean(errors.length);
   }
@@ -227,7 +232,6 @@
       if (!visibility) {
         Array.from(productControls).map((control) => control.style = `visibility: visible`);
         Array.from(productImages).map((image) => image.style = `opacity: 0.7`);
-        console.log(`productImages`)
       }
       visibility = true;
     }
@@ -236,7 +240,8 @@
   const resetVisible = () => {
     if (visibility) {
       Array.from(productControls).map((control) => control.style = `visibility: hidden`);
-      Array.from(productImages).map((image) => image.style = `opacity: 1`);
+      Array.from(productImages).map((image) => image.style = ``);
+      Array.from(productControls).map((control) => control.style = ``);
     }
     visibility = false;
   }
