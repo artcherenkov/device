@@ -290,7 +290,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page-header__catalog-control.page-header__catalog-control--catalog {
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   margin-top: -6px;
 }
 
@@ -304,7 +304,7 @@ input[type="checkbox"].visually-hidden {
 
 .page-header__catalog-rollup-btn {
   padding: 0;
-  margin: -2px 0 0 15px;
+  margin: -2px 0 0 13px;
   background: transparent;
   border: none;
 }
