@@ -55,6 +55,7 @@
 
   const handleClosePopupBtnClick = () => {
     popup.classList.remove(OPEN_POPUP_CLASS);
+    popup.classList.remove(`popup--error`);
     popupForm.reset();
     clearErrors({fullRemove: true});
   }
@@ -70,7 +71,8 @@
   }
 
   const handleFormSubmit = (evt) => {
-    if (checkFormValidity()) {
+    const isValid = checkFormValidity();
+    if (isValid) {
       evt.preventDefault();
     }
   }
@@ -81,6 +83,9 @@
       if (!input.value) {
         setError(input);
       }
+    }
+    if (Boolean(errors.length)) {
+      popup.classList.add(`popup--error`);
     }
     return Boolean(errors.length);
   }
