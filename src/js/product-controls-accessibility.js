@@ -9,7 +9,6 @@
       if (!visibility) {
         Array.from(productControls).map((control) => control.style = `visibility: visible`);
         Array.from(productImages).map((image) => image.style = `opacity: 0.7`);
-        console.log(`productImages`)
       }
       visibility = true;
     }
@@ -18,7 +17,8 @@
   const resetVisible = () => {
     if (visibility) {
       Array.from(productControls).map((control) => control.style = `visibility: hidden`);
-      Array.from(productImages).map((image) => image.style = `opacity: 1`);
+      Array.from(productImages).map((image) => image.style = ``);
+      Array.from(productControls).map((control) => control.style = ``);
     }
     visibility = false;
   }
