@@ -956,7 +956,7 @@ input[type="checkbox"].visually-hidden {
   content: "";
   height: 7px;
   width: 80px;
-  background: #ffc600;
+  background: var(--special-yellow-predark);
   margin-top: 80px;
 }
 
