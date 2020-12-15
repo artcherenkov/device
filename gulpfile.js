@@ -100,3 +100,9 @@ gulp.task("build", gulp.series(
 ));
 
 gulp.task("start", gulp.series("build", "server"));
+
+var ghPages = require('gh-pages');
+
+gulp.task('deploy', function() {
+  ghPages.publish('./public', function(err) {});
+});
