@@ -22,7 +22,7 @@
     "gulp-terser": "^1.2.0",
     "gulp-uglify": "^3.0.2",
     "posthtml-include": "^1.4.3",
-    "terser": "^5.3.8"
+    "terser": "^5.14.2"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
